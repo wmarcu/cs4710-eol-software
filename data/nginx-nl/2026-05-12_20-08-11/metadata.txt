@@ -1,0 +1,21 @@
+Scan Metadata
+=============
+Scan started: 2026-05-12 20:08:11
+Scan ended: 2026-05-13 06:46:34
+Scan duration: 10:38:23 (38303 seconds)
+Script version: nginx-nl
+
+Configuration Parameters:
+------------------------
+Allowlist file: nl-cidr.conf (6359 subnets)
+Bandwidth: 1M
+Max results requested: 0
+ZGrab2 connect timeout: 10s
+ZGrab2 target timeout: 10s
+ZGrab2 senders: 10
+
+Results Summary:
+---------------
+Nginx servers found: 9791
+  - Nginx with version number: 3411
+  - Nginx without version: 6380
