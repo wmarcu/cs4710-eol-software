@@ -28,7 +28,7 @@ docker run --rm -it \
 
 3. From inside the container, run the orchestration script:
 ```bash
-./scripts/
+./scripts/nginx-nl.sh
 ```
 
 4. After the script finishes, check the `data/` directory for results.
