@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
     dumb-init \
     gzip \
     jq \
+    python3 \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=zmap /opt/zmap /opt/zmap
