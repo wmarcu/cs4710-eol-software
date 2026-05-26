@@ -32,7 +32,7 @@ log_error() {
 
 check_prerequisites() {
     local missing_deps=()
-    local required_commands=("zmap" "zgrab2" "ztee" "jq")
+    local required_commands=("zmap" "zgrab2" "ztee" "jq" "python3")
 
     log_info "Checking prerequisites..."
 
@@ -50,6 +50,7 @@ check_prerequisites() {
         [[ " ${missing_deps[*]} " =~ " zgrab2 " ]] && echo "  - ZGrab2: https://github.com/zmap/zgrab2#building-from-source"
         [[ " ${missing_deps[*]} " =~ " ztee " ]] && echo "  - ztee: comes with ZMap installation"
         [[ " ${missing_deps[*]} " =~ " jq " ]] && echo "  - jq: https://stedolan.github.io/jq/download/"
+        [[ " ${missing_deps[*]} " =~ " python3 " ]] && echo "  - Python3: install with your package manager"
         return 1
     fi
 
@@ -156,6 +157,65 @@ setup_output_directory() {
     log_info "Output directory: $OUTPUT_BASE_DIR"
 }
 
+add_cve_mapping() {
+    local input_file="$1"
+    local output_file="$2"
+
+    python3 - "$input_file" "$output_file" <<'PY'
+import csv
+import sys
+
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+mapping = {
+    "1.4.5": ("yes", "CVE-2013-2028; CVE-2014-0133"),
+    "1.10.3": ("yes", "CVE-2017-7529; CVE-2021-23017"),
+    "1.14.0": ("yes", "CVE-2019-20372; CVE-2021-23017"),
+    "1.14.1": ("yes", "CVE-2019-20372; CVE-2021-23017"),
+    "1.14.2": ("yes", "CVE-2019-20372; CVE-2021-23017"),
+    "1.16.1": ("yes", "CVE-2021-23017"),
+    "1.18.0": ("yes", "CVE-2021-23017; CVE-2023-44487"),
+    "1.20.0": ("yes", "CVE-2021-23017; CVE-2023-44487"),
+    "1.20.1": ("yes", "CVE-2021-23017; CVE-2023-44487"),
+    "1.20.2": ("yes", "CVE-2023-44487"),
+    "1.22.0": ("yes", "CVE-2023-44487"),
+    "1.22.1": ("yes", "CVE-2023-44487"),
+    "1.24.0": ("yes", "CVE-2023-44487"),
+    "1.26.1": ("yes", "older advisories only"),
+    "1.26.2": ("yes", "older advisories only"),
+    "1.26.3": ("yes", "older advisories only"),
+    "1.27.5": ("yes", "branch unsupported"),
+    "1.28.0": ("no", "current stable branch"),
+    "1.28.1": ("no", "current stable branch"),
+    "1.29.8": ("no", "current mainline branch"),
+    "1.30.0": ("no", "current mainline branch"),
+}
+
+with open(input_file, newline="") as inp, open(output_file, "w", newline="") as out:
+    reader = csv.DictReader(inp)
+    writer = csv.writer(out)
+    writer.writerow(["ip", "status_code", "server_header", "nginx_version", "eol_status", "cve"])
+
+    for row in reader:
+        version = row.get("nginx_version", "").strip()
+
+        if version == "unknown" or version == "":
+            eol, cve = "unknown", "version hidden"
+        else:
+            eol, cve = mapping.get(version, ("check manually", "no local mapping"))
+
+        writer.writerow([
+            row.get("ip", ""),
+            row.get("status_code", ""),
+            row.get("server_header", ""),
+            version,
+            eol,
+            cve,
+        ])
+PY
+}
+
 run_scan() {
     local results_file="$OUTPUT_BASE_DIR/nginx_versions.csv"
     local metadata_file="$OUTPUT_BASE_DIR/metadata.txt"
@@ -208,13 +268,16 @@ run_scan() {
     ] |
     @csv
 ' >> "$results_file"
+    local cve_results_file="$OUTPUT_BASE_DIR/nginx_versions_cves.csv"
+    add_cve_mapping "$results_file" "$cve_results_file"
+    log_info "CVE-enriched results saved in $cve_results_file"
 
     local end_time=$(date +"%Y-%m-%d %H:%M:%S")
     local end_epoch=$(date +%s)
     local duration=$((end_epoch - start_epoch))
     local duration_formatted=$(printf '%02d:%02d:%02d' $((duration/3600)) $((duration%3600/60)) $((duration%60)))
 
-        local nginx_responses=0
+    local nginx_responses=0
     local nginx_with_version=0
     local nginx_without_version=0
 
@@ -227,6 +290,18 @@ run_scan() {
             nginx_with_version=${nginx_with_version:-0}
             nginx_without_version=$((nginx_responses - nginx_with_version))
         fi
+    fi
+
+    local eol_servers=0
+    local supported_servers=0
+    local hidden_servers=0
+    local vulnerable_servers=0
+
+    if [ -f "$cve_results_file" ]; then
+        eol_servers=$(awk -F',' 'NR>1 && $5=="yes"{count++} END{print count+0}' "$cve_results_file")
+        supported_servers=$(awk -F',' 'NR>1 && $5=="no"{count++} END{print count+0}' "$cve_results_file")
+        hidden_servers=$(awk -F',' 'NR>1 && $5=="unknown"{count++} END{print count+0}' "$cve_results_file")
+        vulnerable_servers=$(awk -F',' 'NR>1 && $6!="version hidden" && $6!="current stable branch" && $6!="current mainline branch" && $6!="no local mapping"{count++} END{print count+0}' "$cve_results_file")
     fi
 
     cat > "$metadata_file" << EOF
@@ -251,6 +326,13 @@ Results Summary:
 Nginx servers found: $nginx_responses
   - Nginx with version number: $nginx_with_version
   - Nginx without version: $((nginx_responses - nginx_with_version))
+
+CVE Summary:
+-----------
+Servers on EOL nginx versions: $eol_servers
+Servers on supported branches: $supported_servers
+Servers with hidden version: $hidden_servers
+Servers with known vulnerabilities: $vulnerable_servers
 EOF
 
     if [ "$nginx_responses" -eq 0 ]; then

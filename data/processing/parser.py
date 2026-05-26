@@ -3,22 +3,38 @@ import csv
 from pathlib import Path
 import pandas as pd
 import socket
+import requests
 
 root = Path("../nginx-nl")
 output = Path("scanned_ips.csv")
 
 first = True
-
+eol_data = requests.get("https://endoflife.date/api/nginx.json").json()
+print(eol_data)
 existing_ips = set()
 open(output, "w").close()
 for csv_file in root.rglob("*.csv"):
     df = pandas.read_csv(csv_file)
+    df["eol_status"] = None
     with open(output, "a", newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
 
         if first: # keep header
             writer.writerow(df.columns)
             first = False
+        i = 0
+
+        for value in df["nginx_version"].to_list():
+            if value != "unknown":
+                for obj in eol_data:
+                    if value.startswith(obj["cycle"]):
+                        df.loc[i,"eol_status"] = obj["eol"]
+                        break
+            else:
+                df.loc[i,"eol_status"] = "N/A"
+            i += 1
+
+
 
         i = 0
         for value in df["ip"].to_list():
