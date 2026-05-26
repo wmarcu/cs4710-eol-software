@@ -2,11 +2,15 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="/workspace"
+
 # Script configuration with defaults
 SCRIPT_NAME="grab-banners"
 DEFAULT_SENDERS=100
 DEFAULT_TIMEOUT="10s"
-DEFAULT_CONFIG_FILE="multiple.ini"
+DEFAULT_CONFIG_FILE="$SCRIPT_DIR/multiple.ini"
+DEFAULT_TARGET_IPS="$SCRIPT_DIR/found-ips.txt"
 
 # Color codes for output
 RED='\033[0;31m'
@@ -50,15 +54,26 @@ check_prerequisites() {
     return 0
 }
 
+check_targets_file() {
+    if [ ! -f "$TARGET_IPS" ]; then
+        log_error "Allowlist file not found: $TARGET_IPS"
+        return 1
+    fi
+
+    local line_count=$(wc -l < "$TARGET_IPS")
+    log_info "Targeting IPs in file: $TARGET_IPS ($line_count total)"
+    return 0
+}
+
 show_help() {
     cat << EOF
-Usage: $0 -i TARGET_IPS -o OUTPUT_FILE [OPTIONS]
+Usage: $0 -i TARGET_IPS -o OUTPUT_DIR [OPTIONS]
 
 Simple script to grab banners from a list of IPs using zgrab2 and output CSV.
 
 OPTIONS:
     -i, --input-file FILE     File with list of IPs (one per line)
-    -o, --output-file FILE    CSV file to save results
+    -o, --output-dir DIR      Output directory
     -s, --senders NUM         Number of zgrab2 sender threads (default: $DEFAULT_SENDERS)
     -t, --timeout TIME        Connection timeout (default: $DEFAULT_TIMEOUT)
     -h, --help                Show this help message
@@ -66,8 +81,8 @@ EOF
 }
 
 parse_args() {
-    TARGET_IPS="found-ips.txt"
-    OUTPUT_FILE="grab-results.csv"
+    TARGET_IPS="$DEFAULT_TARGET_IPS"
+    CUSTOM_OUTPUT_DIR=""
     SENDERS="$DEFAULT_SENDERS"
     TIMEOUT="$DEFAULT_TIMEOUT"
 
@@ -77,8 +92,8 @@ parse_args() {
                 TARGET_IPS="$2"
                 shift 2
                 ;;
-            -o|--output-file)
-                OUTPUT_FILE="$2"
+            -o|--output-dir)
+                CUSTOM_OUTPUT_DIR="$2"
                 shift 2
                 ;;
             -s|--senders)
@@ -100,20 +115,31 @@ parse_args() {
                 ;;
         esac
     done
+}
 
-    if [ -z "$TARGET_IPS" ] || [ -z "$OUTPUT_FILE" ]; then
-        log_error "Input file and output file are required"
-        show_help
-        exit 1
+setup_output_directory() {
+    if [ -n "$CUSTOM_OUTPUT_DIR" ]; then
+        OUTPUT_BASE_DIR="$CUSTOM_OUTPUT_DIR"
+    else
+        local timestamp=$(date +%Y-%m-%d_%H-%M-%S)
+        OUTPUT_BASE_DIR="$PROJECT_ROOT/data/$SCRIPT_NAME/$timestamp"
     fi
+
+    mkdir -p "$OUTPUT_BASE_DIR"
+    OUTPUT_FILE="$OUTPUT_BASE_DIR/grab-results.csv"
+    METADATA_FILE="$OUTPUT_BASE_DIR/metadata.txt"
+
+    log_info "Output directory: $OUTPUT_BASE_DIR"
 }
 
 run_scan() {
     log_info "Starting banner grab..."
     log_info "Target IPs: $TARGET_IPS"
-    log_info "Output file: $OUTPUT_FILE"
     log_info "Senders: $SENDERS"
     log_info "Timeout: $TIMEOUT"
+
+    local start_time=$(date +"%Y-%m-%d %H:%M:%S")
+    local start_epoch=$(date +%s)
 
     # Temporary file for raw zgrab2 output
     local tmp_json
@@ -163,6 +189,54 @@ run_scan() {
 
     rm -f "$tmp_json"
     log_info "Grab completed! CSV results saved in $OUTPUT_FILE"
+
+    local end_time=$(date +"%Y-%m-%d %H:%M:%S")
+    local end_epoch=$(date +%s)
+    local duration=$((end_epoch - start_epoch))
+    local duration_formatted=$(printf '%02d:%02d:%02d' $((duration/3600)) $((duration%3600/60)) $((duration%60)))
+
+    local total_targets=0
+    local total_results=0
+    local nginx_with_version=0
+    local nginx_without_version=0
+
+    total_targets=$(wc -l < "$TARGET_IPS")
+
+    if [ -f "$OUTPUT_FILE" ]; then
+        total_results=$(tail -n +2 "$OUTPUT_FILE" | wc -l)
+
+        nginx_with_version=$(tail -n +2 "$OUTPUT_FILE" \
+            | cut -d',' -f5 \
+            | sed 's/"//g' \
+            | grep -v "^unknown$" \
+            | grep -v "^$" \
+            | wc -l)
+
+        nginx_without_version=$((total_results - nginx_with_version))
+    fi
+
+    cat > "$METADATA_FILE" << EOF
+Grab Metadata
+=============
+Grab started: $start_time
+Grab ended: $end_time
+Grab duration: $duration_formatted ($duration seconds)
+Grab version: $SCRIPT_NAME
+
+Configuration Parameters:
+------------------------
+Input targets file: $TARGET_IPS
+Total targets provided: $total_targets
+Senders: $SENDERS
+Timeout: $TIMEOUT
+ZGrab2 config file: $DEFAULT_CONFIG_FILE
+
+Results Summary:
+---------------
+Total nginx results: $total_results
+  - With version number: $nginx_with_version
+  - Without version number: $nginx_without_version
+EOF
 }
 
 main() {
@@ -172,7 +246,14 @@ main() {
         exit 1
     fi
 
+    if ! check_targets_file; then
+        exit 1
+    fi
+
+    setup_output_directory
     run_scan
+
+    log_info "Done! Check $OUTPUT_BASE_DIR for results"
 }
 
 main "$@"

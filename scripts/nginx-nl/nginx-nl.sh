@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="/workspace"
+
 # Script configuration with defaults
 SCRIPT_NAME="nginx-nl"
 DEFAULT_BANDWIDTH="1M" # Conservative default to avoid overwhelming networks
@@ -9,7 +12,7 @@ DEFAULT_MAX_RESULTS="0" # Default max number of successful results
 DEFAULT_CONNECT_TIMEOUT="10s" # ZGrab2 connection timeout (default 10s)
 DEFAULT_TARGET_TIMEOUT="10s" # ZGrab2 target timeout (default 60s)
 DEFAULT_SENDERS="10" # ZGrab2 sender threads (default 1000)
-DEFAULT_ALLOWLIST_FILE="nl-cidr.conf" # Default location for allowlist
+DEFAULT_ALLOWLIST_FILE="$SCRIPT_DIR/nl-cidr.conf" # Default location for allowlist
 
 # Color codes for output
 RED='\033[0;31m'
@@ -150,7 +153,7 @@ setup_output_directory() {
         OUTPUT_BASE_DIR="$CUSTOM_OUTPUT_DIR"
     else
         local timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-        OUTPUT_BASE_DIR="../data/$SCRIPT_NAME/$timestamp"
+        OUTPUT_BASE_DIR="$PROJECT_ROOT/data/$SCRIPT_NAME/$timestamp"
     fi
 
     mkdir -p "$OUTPUT_BASE_DIR"
