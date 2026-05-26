@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     jq \
     python3 \
     python3-pip \
+    dnsutils \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=zmap /opt/zmap /opt/zmap
