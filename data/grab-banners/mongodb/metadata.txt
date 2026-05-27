@@ -1,0 +1,19 @@
+Grab Metadata
+=============
+Grab started: 2026-05-27 15:02:58
+Grab ended: 2026-05-27 15:48:36
+Grab duration: 00:45:38 (2738 seconds)
+Grab version: grab-banners
+
+Configuration Parameters:
+------------------------
+Input targets file: /workspace/scripts/grab-banners/27017-hosts.csv
+Total targets provided: 7507
+Senders: 100
+Timeout: 60s
+ZGrab2 config file: /workspace/scripts/grab-banners/mongodb.ini
+Protocol: mongodb
+
+Results Summary:
+---------------
+Total results: 605

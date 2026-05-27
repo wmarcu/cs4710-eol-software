@@ -85,6 +85,7 @@ parse_args() {
     CUSTOM_OUTPUT_DIR=""
     SENDERS="$DEFAULT_SENDERS"
     TIMEOUT="$DEFAULT_TIMEOUT"
+    CONFIG_FILE="$DEFAULT_CONFIG_FILE"
 
     while [[ $# -gt 0 ]]; do
         case $1 in
@@ -102,6 +103,10 @@ parse_args() {
                 ;;
             -t|--timeout)
                 TIMEOUT="$2"
+                shift 2
+                ;;
+            -c|--config-file)
+                CONFIG_FILE="$2"
                 shift 2
                 ;;
             -h|--help)
@@ -132,6 +137,87 @@ setup_output_directory() {
     log_info "Output directory: $OUTPUT_BASE_DIR"
 }
 
+get_protocol_from_config() {
+    local config_file="$1"
+    # Extract the first non-Application section name from the config
+    grep -E '^\[' "$config_file" | grep -v 'Application Options' | head -1 | sed 's/\[\(.*\)\]/\1/' | cut -d'.' -f1
+}
+
+process_http() {
+    local tmp_json="$1"
+
+    jq -r --unbuffered '
+        . as $root |
+        .data | to_entries | .[] |
+        select(.value.status == "success") |
+
+        (.value.result.response.headers.server // [null]
+            | map(select(. != null))
+            | join("; ")
+        ) as $server_string |
+
+        {
+            ip: $root.ip,
+            module: .key,
+            raw: .value,
+            server: $server_string
+        } |
+
+        [
+            .ip,
+            .module,
+            (.raw.result.response.status_line // "unknown" | split(" ") | .[0]),
+            .server,
+            (
+                .server
+                | capture("(?<application>[A-Za-z_-]+)/(?<version>[0-9.]+)"; "i")
+                // {version: "unknown"}
+                | .version
+            )
+        ] |
+
+        @csv
+    ' "$tmp_json"
+}
+  
+process_mongodb() {
+    local tmp_json="$1"
+    jq -r --unbuffered '
+        . as $root |
+        .data | to_entries | .[] |
+        select(.value.status == "success") |
+        {
+            ip: $root.ip,
+            module: .key,
+            raw: .value
+        } |
+        [
+            .ip,
+            .module,
+            (.raw.result.build_info.version // "unknown")
+        ] | @csv
+    ' "$tmp_json"
+}
+  
+process_banner() {
+    local tmp_json="$1"
+    jq -r --unbuffered '
+        . as $root |
+        to_entries | map(select(.key | startswith("data"))) | .[] |
+        select(.value.status == "success") |
+        {
+            ip: $root.ip,
+            module: (.key | sub("^data\\."; "")),
+            raw: .value
+        } |
+        [
+            .ip,
+            .module,
+            (.raw.result.banner // "unknown")
+        ] | @csv
+    ' "$tmp_json"
+}
+
 run_scan() {
     log_info "Starting banner grab..."
     log_info "Target IPs: $TARGET_IPS"
@@ -148,44 +234,73 @@ run_scan() {
     zgrab2 multiple \
         --input-file="$TARGET_IPS" \
         --senders="$SENDERS" \
-        --config-file="$DEFAULT_CONFIG_FILE" \
+        --config-file="$CONFIG_FILE" \
         --output-file="$tmp_json"
 
     log_info "Processing results with jq..."
 
-    # Convert to CSV with IP, HTTP status, Server header, and nginx version if present
-    {
-        echo "ip,port,status_code,server_header,nginx_version"
-        jq -r --unbuffered '  
-    . as $root |
-        (
-        if .data.http80 then
-            {port: "80", data: .data.http80}
-        else
-            empty
-        end
-    ),
-    (
-        if .data.http443 then
-            {port: "443", data: .data.http443}
-        else
-            empty
-        end
-    ) |
-    select(.data.status == "success") |
-    (.data.result.response.headers.server // [null]) as $server_array |
-    ($server_array | map(select(. != null)) | join("; ")) as $server_string |
-    select($server_string != "" and ($server_string | test("nginx"; "i"))) |
-    [
-        $root.ip,
-        .port,
-        (.data.result.response.status_line | split(" ") | .[0] // "unknown"),
-        $server_string,
-        ($server_string | capture("nginx/(?<version>[0-9.]+)"; "i") // {version: "unknown"} | .version)
-    ] |
-    @csv
-' "$tmp_json"
+    # Detect protocol from config file  
+    PROTOCOL=$(get_protocol_from_config "$CONFIG_FILE")  
+    log_info "Detected protocol: $PROTOCOL"  
+    
+    # Select appropriate processor  
+    case "$PROTOCOL" in  
+        http)  
+            CSV_HEADER="ip,module,status_code,server_header,version"  
+            PROCESSOR="process_http"  
+            ;;  
+        mongodb)  
+            CSV_HEADER="ip,module,version"  
+            PROCESSOR="process_mongodb"  
+            ;;  
+        banner)  
+            CSV_HEADER="ip,module,banner"  
+            PROCESSOR="process_banner"  
+            ;;  
+        *)  
+            log_error "Unknown protocol: $PROTOCOL"  
+            exit 1  
+            ;;  
+    esac  
+    
+    {  
+        echo "$CSV_HEADER"  
+        $PROCESSOR "$tmp_json"  
     } > "$OUTPUT_FILE"
+
+    # Convert to CSV with IP, HTTP status, Server header, and nginx version if present
+#     {
+#         echo "ip,port,status_code,server_header,nginx_version"
+#         jq -r --unbuffered '  
+#     . as $root |
+#         (
+#         if .data.http80 then
+#             {port: "80", data: .data.http80}
+#         else
+#             empty
+#         end
+#     ),
+#     (
+#         if .data.http443 then
+#             {port: "443", data: .data.http443}
+#         else
+#             empty
+#         end
+#     ) |
+#     select(.data.status == "success") |
+#     (.data.result.response.headers.server // [null]) as $server_array |
+#     ($server_array | map(select(. != null)) | join("; ")) as $server_string |
+#     select($server_string != "" and ($server_string | test("nginx"; "i"))) |
+#     [
+#         $root.ip,
+#         .port,
+#         (.data.result.response.status_line | split(" ") | .[0] // "unknown"),
+#         $server_string,
+#         ($server_string | capture("nginx/(?<version>[0-9.]+)"; "i") // {version: "unknown"} | .version)
+#     ] |
+#     @csv
+# ' "$tmp_json"
+#     } > "$OUTPUT_FILE"
 
     rm -f "$tmp_json"
     log_info "Grab completed! CSV results saved in $OUTPUT_FILE"
@@ -204,15 +319,6 @@ run_scan() {
 
     if [ -f "$OUTPUT_FILE" ]; then
         total_results=$(tail -n +2 "$OUTPUT_FILE" | wc -l)
-
-        nginx_with_version=$(tail -n +2 "$OUTPUT_FILE" \
-            | cut -d',' -f5 \
-            | sed 's/"//g' \
-            | grep -v "^unknown$" \
-            | grep -v "^$" \
-            | wc -l)
-
-        nginx_without_version=$((total_results - nginx_with_version))
     fi
 
     cat > "$METADATA_FILE" << EOF
@@ -230,12 +336,11 @@ Total targets provided: $total_targets
 Senders: $SENDERS
 Timeout: $TIMEOUT
 ZGrab2 config file: $DEFAULT_CONFIG_FILE
+Protocol: $PROTOCOL
 
 Results Summary:
 ---------------
-Total nginx results: $total_results
-  - With version number: $nginx_with_version
-  - Without version number: $nginx_without_version
+Total results: $total_results
 EOF
 }
 
