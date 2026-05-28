@@ -1,0 +1,17 @@
+Scan Metadata
+=============
+Scan started: 2026-05-28 00:34:56
+Scan ended: 2026-05-28 10:12:14
+Scan duration: 09:37:18 (34638 seconds)
+Script version: scan-ports
+
+Configuration Parameters:
+------------------------
+Allowlist file: /workspace/scripts/scan-ports/nl-cidr.conf (6359 subnets)
+Port numbers scanned: 443
+Bandwidth: 1M
+Max results requested: 0
+
+Results Summary:
+---------------
+Total responsive (IP,port) pairs: 89291
