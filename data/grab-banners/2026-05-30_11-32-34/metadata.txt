@@ -1,0 +1,19 @@
+Grab Metadata
+=============
+Grab started: 2026-05-30 11:32:34
+Grab ended: 2026-05-30 11:34:36
+Grab duration: 00:02:02 (122 seconds)
+Grab version: grab-banners
+
+Configuration Parameters:
+------------------------
+Input targets file: /workspace/scripts/grab-banners/found-ips.txt
+Total targets provided: 280
+Senders: 100
+Timeout: 10s
+ZGrab2 config file: /workspace/scripts/grab-banners/mongodb.ini
+Protocol: mongodb
+
+Results Summary:
+---------------
+Total results: 24
