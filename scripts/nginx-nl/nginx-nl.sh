@@ -163,60 +163,14 @@ setup_output_directory() {
 add_cve_mapping() {
     local input_file="$1"
     local output_file="$2"
+    local enricher_script="$PROJECT_ROOT/data/processing/enrich_nginx_versions.py"
 
-    python3 - "$input_file" "$output_file" <<'PY'
-import csv
-import sys
+    if [ ! -f "$enricher_script" ]; then
+        log_error "CVE enrichment script not found: $enricher_script"
+        return 1
+    fi
 
-input_file = sys.argv[1]
-output_file = sys.argv[2]
-
-mapping = {
-    "1.4.5": ("yes", "CVE-2013-2028; CVE-2014-0133"),
-    "1.10.3": ("yes", "CVE-2017-7529; CVE-2021-23017"),
-    "1.14.0": ("yes", "CVE-2019-20372; CVE-2021-23017"),
-    "1.14.1": ("yes", "CVE-2019-20372; CVE-2021-23017"),
-    "1.14.2": ("yes", "CVE-2019-20372; CVE-2021-23017"),
-    "1.16.1": ("yes", "CVE-2021-23017"),
-    "1.18.0": ("yes", "CVE-2021-23017; CVE-2023-44487"),
-    "1.20.0": ("yes", "CVE-2021-23017; CVE-2023-44487"),
-    "1.20.1": ("yes", "CVE-2021-23017; CVE-2023-44487"),
-    "1.20.2": ("yes", "CVE-2023-44487"),
-    "1.22.0": ("yes", "CVE-2023-44487"),
-    "1.22.1": ("yes", "CVE-2023-44487"),
-    "1.24.0": ("yes", "CVE-2023-44487"),
-    "1.26.1": ("yes", "older advisories only"),
-    "1.26.2": ("yes", "older advisories only"),
-    "1.26.3": ("yes", "older advisories only"),
-    "1.27.5": ("yes", "branch unsupported"),
-    "1.28.0": ("no", "current stable branch"),
-    "1.28.1": ("no", "current stable branch"),
-    "1.29.8": ("no", "current mainline branch"),
-    "1.30.0": ("no", "current mainline branch"),
-}
-
-with open(input_file, newline="") as inp, open(output_file, "w", newline="") as out:
-    reader = csv.DictReader(inp)
-    writer = csv.writer(out)
-    writer.writerow(["ip", "status_code", "server_header", "nginx_version", "eol_status", "cve"])
-
-    for row in reader:
-        version = row.get("nginx_version", "").strip()
-
-        if version == "unknown" or version == "":
-            eol, cve = "unknown", "version hidden"
-        else:
-            eol, cve = mapping.get(version, ("check manually", "no local mapping"))
-
-        writer.writerow([
-            row.get("ip", ""),
-            row.get("status_code", ""),
-            row.get("server_header", ""),
-            version,
-            eol,
-            cve,
-        ])
-PY
+    python3 "$enricher_script" "$input_file" "$output_file"
 }
 
 run_scan() {
