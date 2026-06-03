@@ -11,7 +11,6 @@ import requests
 
 def map_eol(first: bool, output: Path, eol_data: list, df: pandas.DataFrame,existing: set):
     df["eol_status"] = None
-    print(df)
     with open(output, "a", newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
 
@@ -36,8 +35,6 @@ def map_eol(first: bool, output: Path, eol_data: list, df: pandas.DataFrame,exis
         i = 0
         for value in df["ip"].to_list():
             if value not in existing:
-                if(len(df) == 5263):
-                    print(i)
                 writer.writerow(df.iloc[i])
                 existing.add(value)
             i += 1
@@ -258,8 +255,8 @@ count_versions_and_eol(input_openssl,"openssl",output_versions_openssl,output_eo
 
 
 def graph_eol(input_path: Path, output_path: Path, software: str):
-    software_dates = software + "_dates"
-    software_status = software + "_status"
+    software_dates = software + "_dates.pdf"
+    software_status = software + "_status.pdf"
 
     df = pd.read_csv(input_path, header=None, names=["EOL date", "number of hosts"])
     df_eol_dates = df[df["EOL date"] != "unknown"]
@@ -271,7 +268,7 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
     plt.ylabel("number of hosts")
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig(output_path / software_dates)
+    plt.savefig(output_path / software_dates,format = "pdf")
 
     df_eol_status = df
     df_eol_status["EOL status"] = df["EOL date"].where(
@@ -288,7 +285,7 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
     )
 
     plt.title("Percentage of hosts operating on EOL " + software)
-    plt.savefig(output_path / software_status)
+    plt.savefig(output_path / software_status, format="pdf")
     plt.close()
 
 input_nginx = Path("results/nginx/counts_eol.csv")
@@ -315,4 +312,4 @@ plt.pie(
     autopct="%1.1f%%"
 )
 plt.axis("equal")
-plt.savefig("results/graphs/other_software_distribution.png")
+plt.savefig("results/graphs/other_software_distribution.pdf", format="pdf")
