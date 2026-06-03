@@ -11,8 +11,7 @@ import requests
 
 def map_eol(first: bool, output: Path, eol_data: list, df: pandas.DataFrame,existing: set):
     df["eol_status"] = None
-    if first:
-        open(output, "w").close()
+    print(df)
     with open(output, "a", newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
 
@@ -37,6 +36,8 @@ def map_eol(first: bool, output: Path, eol_data: list, df: pandas.DataFrame,exis
         i = 0
         for value in df["ip"].to_list():
             if value not in existing:
+                if(len(df) == 5263):
+                    print(i)
                 writer.writerow(df.iloc[i])
                 existing.add(value)
             i += 1
