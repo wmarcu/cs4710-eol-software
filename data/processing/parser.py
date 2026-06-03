@@ -46,6 +46,9 @@ root2 = Path("../grab-banners")
 output_nginx = Path("results/nginx/scanned_ips.csv")
 output_mongodb =  Path("results/mongodb/scanned_ips.csv")
 output_openssl =  Path("results/openssl/scanned_ips.csv")
+open(output_nginx, "w").close()
+open(output_mongodb, "w").close()
+open(output_openssl, "w").close()
 
 first_nginx = True
 first_mongodb = True
