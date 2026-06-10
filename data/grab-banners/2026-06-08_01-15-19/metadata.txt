@@ -1,0 +1,19 @@
+Grab Metadata
+=============
+Grab started: 2026-06-08 01:15:19
+Grab ended: 2026-06-08 01:17:02
+Grab duration: 00:01:44 (104 seconds)
+Grab version: grab-banners
+
+Configuration Parameters:
+------------------------
+Input targets file: ./scripts/resolve-dns/dutch-gov-ips.txt
+Total targets provided: 657
+Senders: 100
+Timeout: 10s
+ZGrab2 config file: /workspace/scripts/grab-banners/multiple.ini
+Protocol: http
+
+Results Summary:
+---------------
+Total results: 841
