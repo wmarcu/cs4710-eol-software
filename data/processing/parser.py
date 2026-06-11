@@ -9,7 +9,19 @@ import pandas as pd
 import socket
 import requests
 
+'''
+parser.py
 
+This file is used for the step 3 and 4 of the methodology of our EoL research - the post-processing of the probed ips.
+Usage:
+python3 parser.py [--input <input_dir>] [--output <output_dir>]
+Example:
+python3 parser.py --input ../input/grab-banners/2026-06-08_01-15-19 --output my_results
+
+default values for --input and --output are "../input" and "results"
+'''
+
+# For each csv file, maps nginx/MongoDB/OpenSSL versions to their EoL dates using the endoflife.date API
 def map_eol(first: bool, output: Path, eol_data: list, df: pandas.DataFrame,existing: set):
     df["eol_status"] = None
     with open(output, "a", newline='', encoding='utf-8') as f:
@@ -48,14 +60,17 @@ parser.add_argument("--output", default="results")
 
 args = parser.parse_args()
 
-
+# setup
 root1 = Path(args.input)
+
 output_nginx = Path(f"{args.output}/nginx/scanned_ips.csv")
 output_mongodb =  Path(f"{args.output}/mongodb/scanned_ips.csv")
 output_openssl =  Path(f"{args.output}/openssl/scanned_ips.csv")
+
 output_nginx.parent.mkdir(parents=True, exist_ok=True)
 output_mongodb.parent.mkdir(parents=True, exist_ok=True)
 output_openssl.parent.mkdir(parents=True, exist_ok=True)
+
 open(output_nginx, "w").close()
 open(output_mongodb, "w").close()
 open(output_openssl, "w").close()
@@ -63,10 +78,21 @@ open(output_openssl, "w").close()
 first_nginx = True
 first_mongodb = True
 first_openssl = True
+
 eol_data_openssl = requests.get("https://endoflife.date/api/openssl.json").json()
 eol_data_nginx = requests.get("https://endoflife.date/api/nginx.json").json()
 eol_data_mongodb = requests.get("https://endoflife.date/api/mongodb.json").json()
 
+total_scanned = 0
+other_software = {}
+
+existing_nginx = set()
+existing_mongodb = set()
+existing_openssl = set()
+
+
+
+# used as a helper to detect version EoL dates for nginx versions that aren't in the API directly
 obj = {"cycle": "1.5", "name": "test"}
 eol_data_nginx2 = copy.deepcopy(eol_data_nginx)
 for obj in eol_data_nginx:
@@ -76,11 +102,9 @@ for obj in eol_data_nginx:
         new_obj["cycle"] = f"{prefix}.{int(x) + 1}"
         eol_data_nginx2.append(new_obj)
 eol_data_nginx = eol_data_nginx2
-total_scanned = 0
-other_software = {}
-existing_nginx = set()
-existing_mongodb = set()
-existing_openssl = set()
+
+
+# iteration over input files in the input folder to collect EoL/software data
 for csv_file in list(root1.rglob("*.csv")):
     df = pandas.read_csv(csv_file)
     if df.columns.str.contains("nginx_version").any():
@@ -171,6 +195,8 @@ def cymru_lookup(ip_list: list) -> pd.DataFrame:
             response += chunk
 
     return parse_result(response.decode())
+
+# takes in the output from the initial for loop and groups entries by EoL date and version
 def count_versions_and_eol(input: Path, type: str, output_versions: Path, output_eol: Path):
     if type == "nginx":
         df = pandas.read_csv(input, header=None, names=["ip", "status_code", "server_header","version","eol_status"])
@@ -212,13 +238,16 @@ def count_versions_and_eol(input: Path, type: str, output_versions: Path, output
             else:
                 writer.writerow([key, value])
 
+# graphs the EoL data for each of the types of software and puts it in a separate folder
 def graph_eol(input_path: Path, output_path: Path, software: str):
     software_dates = software + "_dates.pdf"
     software_status = software + "_status.pdf"
 
     df = pd.read_csv(input_path, header=None, names=["EOL date", "number of hosts"])
+
     df_eol_dates = df[df["EOL date"] != "unknown"]
     df_eol_dates = df_eol_dates.sort_values("EOL date", ascending = False)
+
     plt.figure(figsize=(12, 6))
     plt.bar(df_eol_dates["EOL date"], df_eol_dates["number of hosts"], color = "red")
     plt.title("EOL dates for " + software + " hosts")
@@ -249,7 +278,7 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
 output_graphs = Path(f"{args.output}/graphs")
 output_graphs.mkdir(parents=True, exist_ok=True)
 
-
+# checks for each of the types of software, if the input folder didn't contain any, skips its post-processing as it's redundant
 if Path(output_nginx).exists() and Path(output_nginx).stat().st_size > 0:
     df = pd.read_csv(output_nginx)
     ip_list = df["ip"].dropna().tolist()
@@ -306,11 +335,15 @@ if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
     org_counts = merged["org"].value_counts().reset_index()
     org_counts.columns = ["org", "count"]
     org_counts.to_csv(f"{args.output}/openssl/org_counts.csv", index=False)
+
     input_openssl = output_openssl
     output_versions_openssl = Path(f"{args.output}/openssl/counts_versions.csv")
     output_eol_openssl = Path(f"{args.output}/openssl/counts_eol.csv")
+
     count_versions_and_eol(input_openssl, "openssl", output_versions_openssl, output_eol_openssl)
+
     input_openssl = Path(f"{args.output}/openssl/counts_eol.csv")
+
     graph_eol(input_openssl,output_graphs,"OpenSSL")
 
 
@@ -318,7 +351,7 @@ if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
 
 
 
-
+# makes a small popularity graph for any other software processed during the scan
 other_software_sorted = sorted(other_software.items(), key=lambda x: x[1], reverse=True)
 top5 = other_software_sorted[:5]
 other_sum = sum(v for _, v in other_software_sorted[5:])
