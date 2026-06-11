@@ -266,10 +266,10 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
     df_eol_dates = df_eol_dates.sort_values("EOL date", ascending = False)
     plt.figure(figsize=(12, 6))
     plt.bar(df_eol_dates["EOL date"], df_eol_dates["number of hosts"], color = "red")
-    plt.title("EOL dates for " + software + " hosts")
-    plt.xlabel("EOL date")
-    plt.ylabel("number of hosts")
-    plt.xticks(rotation=45)
+    plt.xlabel("EOL date",fontsize=20)
+    plt.ylabel("number of hosts",fontsize=20)
+    plt.xticks(rotation=45,ha='right',fontsize=20)
+    plt.yticks(fontsize=20)
     plt.tight_layout()
     plt.savefig(output_path / software_dates,format = "pdf")
 
@@ -287,7 +287,6 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
         autopct="%1.1f%%"
     )
 
-    plt.title("Percentage of hosts operating on EOL " + software)
     plt.savefig(output_path / software_status, format="pdf")
     plt.close()
 

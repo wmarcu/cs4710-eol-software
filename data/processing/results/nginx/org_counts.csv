@@ -1,773 +1,770 @@
 org,count
-"TRANSIP-AS - Signet B.V., NL",22076
-"LEASEWEB-NL-AMS-01 - LeaseWeb Netherlands B.V., NL",19664
-"AKAMAI-LINODE-AP - Akamai Connected Cloud, SG",19000
-"KPN - KPN B.V., NL",11688
-"TNF-AS - Vodafone Libertel B.V., NL",11316
-"ADVANCEDHOSTERS-AS - DataWeb Global Group B.V., NL",6460
-"PODAON - Podaon SIA, LV",6424
-"HOSTKEY-AS - HOSTKEY B.V., NL",5600
-"Odido - Odido Netherlands B.V., NL",5508
-"WorldStream - WorldStream B.V., NL",5408
-"CLDIN-NL - Your Hosting B.V., NL",4380
-"HOSTNET - Hostnet B.V., NL",3724
-"SERVERS-COM - Servers.com, Inc., US",3284
-"COGENT-174 - Cogent Communications, LLC, US",3252
-"PODAON - NovoServe B.V., NL",3048
-"KEEN-AS - KeenSystems B.V., NL",2916
-"KABELFOON - DELTA Fiber Nederland B.V., NL",2564
-"ROYALE-AS - RoyaleHosting BV, NL",2444
-"NL-BIT - BIT BV, NL",2228
-"ONECOM - One.com A/S, DK",2172
-"WEBZILLA - Webzilla B.V., NL",2108
-"Liteserver - The Infrastructure Group B.V., NL",2060
-"AS-ITGLOBALCOM - ITGLOBAL.COM NL B.V., NL",1756
-"NFORCE - NForce Entertainment B.V., NL",1720
-"NABL-AS - N-able Acquisition Company B.V., NL",1508
-"SIAMDATA-TH - Siamdata Communication Co.,Ltd., TH",1432
-"TILAA - Tilaa B.V., NL",1276
-"XL-AS - Signet B.V., NL",1208
-"SURFNET-NL - SURF B.V., NL",1204
-"UNISERVER-AS - Uniserver Internet B.V., NL",1080
-"Serverius-as - Serverius Holding B.V., NL",1040
-"FREEDOMINTERNET - Freedom Internet BV, NL",1028
-"SpectraIP - SpectraIP B.V., NL",972
-"InfoPact-AS - Infopact Netwerkdiensten B.V., NL",968
-"NEDZONE-AS - Eurofiber Cloud Infra B.V., NL",900
-"Greenhost - Greenhost BV, NL",676
-"CYSO-AS - Cyso Group B.V., NL",668
-"GLOBALLAYER - Global Layer B.V., NL",668
-"podaon-pl-1 - Podaon SIA, LV",664
-"NOVOSERVE-AS - NovoServe B.V., NL",648
-"WEDARE - We Dare B.V., NL",636
-"i3Dnet - i3D.net B.V, NL",636
-NA,624
-"onehostplanet - Onehostplanet s.r.o., CZ",588
-"COMBELL-AS - Combell NV, BE",584
-"TrueServer-AS - TrueFullstaq B.V., NL",572
-"CJ2-AS - CJ2 Hosting B.V., NL",568
-"SERVIHOSTING-AS - AIRE NETWORKS DEL MEDITERRANEO SL UNIPERSONAL, ES",556
-"INT-NETWORK - IP Volume inc, SC",552
-"PREVIDER-AS - Previder B.V., NL",548
-"NL-SOLCON - Solcon Internetdiensten B.V., NL",540
-"A2B - A2B IP B.V., NL",532
-"Equinix - Equinix (EMEA) Acquisition Enterprises B.V., NL",532
-"VikingHost - Viking Host B.V., NL",520
-"FUNDAMENTS-AS - Fundaments B.V., NL",508
-"PROLOCATION - Prolocation B.V., NL",496
-"NEXTPERTISE - Nextpertise B.V., NL",460
-"METAREGISTRAR - Metaregistrar B.V., NL",456
-"ABELOHOST - Abelohost BV, NL",452
-"Interconnect - ML Consultancy, NL",444
-"VOIZXL-AS - voizXL B.V., NL",440
-"AMAZON-02 - Amazon.com, Inc., US",424
-"Snel - Snel.com B.V., NL",412
-"ONE-NETWORK - dogado GmbH, DE",412
-"AS-EUROFIBER - Eurofiber Nederland BV, NL",400
-"WGIX - WGIX, US",392
-"ASN-ROUTIT - Routit BV, NL",384
-"Procolix - ProcoliX B.V., NL",380
-"TUDELFT-NL - SURF B.V., NL",372
-"I-3 - N-able Technologies, Inc., US",364
-"FREE RANGE CLOUD - Free Range Cloud Hosting Inc., CA",364
-"ASDETUK - Hivelocity LLC, US",364
-"INTERNET-SPEECH-AND-PRIVACY-LLC - IncogNet LLC, US",356
-"DUOCAST-AS - Duocast B.V., NL",348
-"ASN-ROUTELABEL - RouteLabel V.O.F., NL",348
-"Dedifix - Dedifix BV, NL",344
-"TUXIS - The Internet Engineering Group B.V., NL",328
-"FIBO - Fiber Operator B.V., NL",320
-"REDHOSTING-AS - Enreach Netherlands B.V., NL",316
-"quickhostuk - QuickHostUK Limited, GB",316
-"AKAMAI-ASN1 - Akamai International B.V., NL",312
-"ULTAHOST-AS - Ultahost, Inc., US",304
-"mijnhost - mijn.host B.V., NL",304
-"HS-HOST9X - Host9x Web Solutions Limited, HK",292
-"MIRhosting - MIRhosting B.V., NL",292
-"BattleHost - KAUA REIS DA SILVA trading as BattleHost, BR",280
-"INTERRACKS-AS - InterRacks B.V., NL",280
-"Enflow - Enflow B.V., NL",276
-"TK-NET - Telkom Internet LTD, SC",272
-"zap-hosting - ZAP-Hosting GmbH, DE",272
-"BITENCY-AS - DODW Holding B.V., NL",272
-"UNITED - United Internet Ltd., RS",264
-"FYFEWEB - FyfeWeb Ltd, GB",264
-"AS-TBNLTN - Signet B.V., NL",264
-"COMPUKOS-AS - DirectVPS B.V., NL",256
-"Windcloud40-as - Windcloud 4.0 GmbH, DE",252
-"GLOBAL-E - Previder B.V., NL",252
-"NETSOLUTIONS - Net Solutions - Consultoria Em Tecnologias De Informacao, Sociedade Unipessoal LDA, MO",252
-"HIGH5-NL - High5! B.V., NL",248
-"EQuest-AS - e-Quest IT-diensten B.V., NL",244
-"AS268624 - Gamers Club Ltda, BR",244
-"BEST-LINE-AS - Best Line Ltd., RU",236
-"UTWENTE-AS - SURF B.V., NL",236
-"services-1337-gmbh - 1337 Services GmbH, DE",228
-"AHASEND - AhaSend B.V., NL",220
-"ALTUS - AltusHost B.V., NL",216
-"RSMedia-AS - RS-Media LLC, RU",208
-"HIZAKURA-NL - Hizakura B.V., NL",208
-"BlackGATE - BlackGATE B.V., NL",204
-"signetbreedband - Signet B.V., NL",204
-"NIXVAL - FALBOX S.L. trading as NIXVAL, ES",200
-"ETHERON - Lars Jannick Volkers trading as Etheron Hosting, NL",200
-"MOJHOST-EU - MOJOHOST B.V., NL",200
-"TRANS-IX-AS - Trans-iX B.V., NL",200
-"NL-INTERMAX - Intermax Group B.V., NL",200
-"ADYEN - Adyen N.V., NL",196
-"NGNETWORKS - NG-BLU Networks B.V., NL",192
-"hosting2go - Hosting 2 GO B.V., NL",188
-"COLOCLUE-AS - Netwerkvereniging Coloclue, NL",184
-"NETH-AS - NETH LLC, UA",180
-"NL-PRIVATEHOST - Private Host BV, NL",180
-"XTOM-JAPAN - xTom Japan Corporation, JP",176
-"NTPCL-AS-AP - National Telecom Public Company Limited, TH",172
-"QONNECTED-AS - Qonnected B.V., NL",168
-"eFolder-NL - eFolder Holdings B.V., NL",168
-"host-industry - HOSTING INDUSTRY LIMITED, GB",164
-"GreenCloud - Greencloud LLC, VN",160
-"MC-NODE-AS - Stef Herman Anton Wolters trading as MC-Node, NL",156
-"Access2IT - Access2.IT Group B.V., NL",152
-"MYLOC-AS - WIIT AG, DE",148
-"MYGAMES - MY.GAMES B.V., NL",148
-"X2COM - X2com BV, NL",144
-"greenedge - GreenEdge B.V., NL",144
-"FIBERRING - LeaseWeb Network B.V., NL",144
-"OSSO - OSSO B.V., NL",140
-"SolidBE - SolidBE BV, NL",140
-"AS-HOSTINGER - Hostinger International Limited, CY",140
-"AKAMAI-AS - Akamai Technologies, Inc., US",136
-"Esmero - Esmero Holding B.V., NL",136
-"PLINQ - PLINQ BV, NL",132
-"HostSlim-Global-Network - HOSTSLIM OU, EE",132
-"DDF-AS - DDFR IT Infra & Security B.V., NL",132
-"ALLHOSTINGS - Innovative IT Solutions LLC, RU",128
-"DMA-AS - Shaun O_Neil, trading as DMA Computer Services, NL",128
-"KPN-INTERNEDSERVICES - Vancis IP B.V., NL",128
-"ASIMO-AS - Asimo Networks B.V., NL",124
-"ZYLON-AS - Bas Smit trading as Zylon, NL",124
-"NL-NETVISIT - Netvisit B.V., NL",124
-"AS-ITGLOBALCOM-KZ - ITGLOBAL.COM RUS Ltd, RU",124
-"SIGNET-AS - Signet B.V., NL",124
-"AS-F2X - Fiber Services B.V., NL",120
-"weserve - Weserve B.V., NL",120
-"SEWAN-NL - Sewan Nederland B.V., NL",120
-"EuroNet - Euronet Communications B.V., NL",120
-"XXLnet - XXLnet B.V., NL",120
-"XTOM - xTom Pty Ltd, AU",120
-"AS-XYNTA - Onworx BV, NL",116
-"FUSIX-AS - Fusix Networks B.V., NL",116
-"WholesaleConnections - Wholesale Connections B.V., NL",112
-"VBOXX - vBoxx B.V., NL",108
-"CITIC - CITIC Telecom CPC Netherlands B.V., NL",108
-"EKACOD-AS - Vichislitelniy Centr Ltd., RU",108
-"ATOM86-AS - atom86 BV, NL",108
-"CLOUDFORESTCOLTD-AS-AP - CLOUDFOREST CO., LTD., TH",108
-"INFRAPOD - Jeroen van Brink trading as Infrapod, NL",108
-"Servada - Servada B.V., NL",104
-"ArenHost - Hadi Santosa, ID",104
-"XTOM-AS-JP - xTom, JP",104
-"IPCONNECT - IP Connect Inc, SC",100
-"RIPE-NCC-AS - Reseaux IP Europeens Network Coordination Centre (RIPE NCC), NL",96
-"CRITICALCORE - Critical Core BV, NL",96
-"AS268581 - QNAX LTDA, BR",96
-"LUCK-NETO-01 - NetO Corp, US",96
-"IP-EEND-AS - SURF B.V., NL",96
-"INFRABLOCKS - The Infrastructure Group B.V., NL",92
-"DTLN - Data Storage Center JSC, RU",92
-"HS - Host Sailor Ltd, AE",92
-"ASNET - Baxet Group Inc., US",92
-"SPEEDXS-AS - DELTA Fiber Nederland B.V., NL",92
-"ThreeData-AS - 3DATA LLC, RU",92
-"ASSEFLOW - Seflow s.r.l., IT",88
-"MEZZAMI-AS - Mezzami B.V., NL",88
-"XTOM - xTom GmbH, DE",88
-"PAYLOGIC - EVENTIM Holding Benelux B.V., NL",88
-"VSHOSTING - VSHOSTING-CDN, CZ",84
-"GREENMINIHOST - Green Mini host BV, NL",84
-"CLOUDNL-AS - CLOUD.nl B.V., NL",84
-"CORENET - Core Network Services FZE, AE",84
-"ONIDEL-AS-AP - Onidel Pty Ltd, AU",84
-"FOURCONSULT - 4Consult B.V., NL",84
-"ASN-POSTA - Posta Slovenije d.o.o., SI",84
-"XTOM - xTom, HK",84
-"DATAFIBER - DataFiber Group B.V., NL",84
-"JONAZ - Jonaz B.V., NL",80
-"INIOS-AS - Inios Oy, FI",80
-"Rapidgator-AS - ULTRANEX LTD, CY",80
-"SMARTWAVE-BROADBAND-AS - SmartWave Broadband LLC, US",80
-"NETREBEL - netrebel b.v., NL",80
-"A1-DC - A1 Internet BV, NL",76
-"HOSTGHOST-AS - HostGhost B.V., NL",76
-"logicforge - LogicForge Limited, GB",76
-"EKMEDIA - EK-Media B.V., NL",76
-"NubaCloud - NubaCloud B.V., NL",76
-"FBX-AS - FiberXpress BV, NL",76
-"voipedeu - Voiped Wholesale BV, NL",76
-"RACKGENIUS - RackGenius, US",72
-"NL-KABELTEX - Netwerk Exploitatiemaatschappij B.V., NL",72
-"Go-Trex - Go-Trex Holding BV, NL",72
-"AS-GLOBALTELEHOST - GTHost, US",72
-"BIGNET-AS - _AS43668_ LLC, UA",72
-"WORLDSTREAM - WorldStream B.V., NL",72
-"AS-SERVERION - Des Capital B.V., NL",72
-"nl-1key - 1KEY BV, NL",72
-"NL-CAVEO - Caveo Internet BV, NL",72
-"TECHNOBERG - Technoberg Beheer B.V., NL",68
-"LibertyGlobal - Liberty Global Europe Holding B.V., NL",68
-"AS53107 - EVEO S.A., BR",68
-"ThreeDATA-AS - 3DATA LLC, RU",68
-"CDNetworks - GLOBAL CLOUD NETWORK LLC, RU",68
-"CDNEXT - Datacamp Limited, GB",68
-"GL-IX-AS - Totaalnet Internet Works B.V., NL",64
-"ESAB-AS - 31173 Services AB, SE",64
-"NETROUTING-AS - Netrouting B.V., NL",64
-"FLEXYNODE-AS - Bram de Graaf trading as FlexyNode, NL",64
-"COMNET-AS - Comnet Internetional BV, NL",64
-"GD-EMEA-DC-LD5 - Heart Internet limited, GB",64
-"Century-LTD - CenturyNetworks Ltd, MH",60
-"hostshield - HOSTSHIELD LTD, GB",60
-"Infracom-AS - Infracom Holding B.V., NL",60
-"LUNA - Ekco B.V., NL",60
-"SIT - ExtraIP B.V., NL",60
-"PFCLOUD - Pfcloud UG (haftungsbeschrankt), DE",60
-"VXbits - Vertixo BV, NL",60
-"SPACECORE - SPACECORE SOLUTION LTD, GB",60
-"SERVAONE - SERVA ONE LTD, GB",56
-"HSCG-AS - Network Operations B.V, NL",56
-"DATAWEB - DataWeb B.V., NL",56
-"ASSERVEREASY - Servereasy Srl, IT",56
-"VIRTUALXS-AS - Virtual Access Internet BV, NL",56
-"BIP-AS - Eweka Internet Services B.V., NL",56
-"FEROXHOSTING-NET - Luc Haaijer trading as Ferox Hosting, NL",56
-"ECHELON-AS - Root Holding B.V., NL",56
-"m3networks - M3 Groep BV, NL",56
-"NL-NEFOS-AS - Nefos IT bv, NL",56
-"gidpro - GidPro BV, NL",56
-"PT - KPN B.V., NL",56
-"DCSPINE - Eurofiber Cloud Infra B.V., NL",52
-"GAMEPOINT - Gamepoint B.V., NL",52
-"TRIPLE-IT - Triple IT BV, NL",52
-"Voys - Devhouse Spindle B.V., NL",52
-"CYBERCON - CYBERCON, INC., US",52
-"ColoCenter - ColoCenter b.v., NL",52
-"NewVM-AS - NewVM B.V., NL",48
-"ASN-COMMUNITYFIBRE - Community Fibre Limited, GB",48
-"ARTOFAUTOMATION-AS - Art of Automation B.V., NL",48
-"GHOSTYNETWORKS - Ghosty Networks LLC, US",48
-"CBWS-AS - CBWS Holding B.V., NL",48
-"TNGNET - TNGNET B.V., NL",48
-"CleverIT - CleverIT B.V., NL",48
-"INS-AS - AT&T Enterprises, LLC, US",48
-"AS270824 - ENX Services, BR",48
-"MIRHOSTING-NL - MIRhosting B.V., NL",48
-"EXTRAIP-AS - ExtraIP B.V., NL",48
-"asbizwaynl - Bizway BV, NL",44
-"BREEDBANDNEDERLAND - Signet B.V., NL",44
-"MOBIELWERKT - MobielWerkt B.V., NL",44
-"HIVOS - Stichting Hivos, NL",44
-"ZeroPlex - ZeroPlex B.V., NL",44
-"VELOXSERV - VeloxServ Communications Ltd, GB",44
-"CrownCloud - GWY IT PTY LTD, AU",44
-"MyGamesSwitzerland - MY.GAMES B.V., NL",40
-"CheeseHosting - KaasHosting B.V., NL",40
-"GSLNETWORKS-AS-AP - GSL Networks Pty LTD, AU",40
-"CHOCIZ-AS - Chociz Private Limited, IN",40
-"InternetArchiveEU - InternetArchiveEU, NL",40
-"PROXILITY-AS - Scalix B.V., NL",40
-"V6NODE-AS - Ian David Klemm, DE",40
-"ASN-NETHOLDING - Garnier Projects BV, NL",40
-"kavosnl - Kinga de Vos trading as Kavos Vof, NL",40
-"NEDERLANDNET-AS - Computel Standby BV, NL",40
-"Walhalla__AS30937 - Walhalla Data Center Services SL, ES",36
-"SKP - SKP B.V., NL",36
-"serac-nl - Serac Applications B.V., NL",36
-"M247 - M247 Europe SRL, RO",36
-"THREE-W-INFRA-AS - 3W Infra B.V., NL",36
-"AS28022 - CRISP S.A., CR",36
-"STEFFANN-DC-AS - S.J.M. Steffann, NL",36
-"ASLD4UNITY - LD4Unity B.V., NL",36
-"MGHosting - Mark van Ginkel trading as MGHOSTING, NL",36
-"VDSKA-AS - Anton Levin, KG",36
-"EstNOC-GLOBAL - EstNOC OU, EE",36
-"VI-PORT-AS - VI-PORT LLC, UA",36
-"FOON - Digifoon Group B.V., NL",36
-"PUBLIEKE-OMROEP-AS - Stichting Nederlandse Publieke Omroep, NL",36
-"NEDAP-AS - Nedap N.V., NL",36
-"ONEOF1SERVERS - 1 of 1 Servers Corp, US",36
-"Cloudcontainers - Initworks b.v., NL",36
-"as_init3 - Init3 BV, NL",36
-"onecentral - onecentral B.V., NL",36
-"BUSINESSCONNECT - Today Concepts B.V., NL",36
-"SOLVINITY-NL - Solvinity B.V., NL",36
-"GETRONICS_AS - GTN Services B.V., NL",36
-"JSR-IT-BV - JSR IT B.V., NL",32
-"PETIT-AS - Petit Telecom B.V., NL",32
-"FIBER01-WOERDEN-AS - Switch Datacenters Amsterdam 6 B.V., NL",32
-"KVMKA-COM - ALEKSEI FEDOROV PR KRUSEVAC, RS",32
-"CUCI - Cubic Circle B.V., NL",32
-"MAMUTRAHAL - MAMUT RAHAL SOFTWARE - FZCO, AE",32
-"NETIFACE-AS - Netiface Limited, GB",32
-"IP-PROJECTS - Michael Sebastian Schinzel trading as IP-Projects GmbH & Co. KG, DE",32
-"MYBIT - MyBit Services BV, NL",32
-"DEDICATEDNODES-AS - Danny Nieuwenhuis trading as DedicatedNodes, NL",32
-"CLARANET-AS - Claranet Limited, GB",32
-"UVA-NL - IDDQD-AS, EU",32
-"GOLDENNET - Rabchuk Valentyna Viktorivna, UA",32
-"STARGROUP-UA-AS - Stargroup LLC, UA",32
-"IN2IP-AS - IN2IP-AS, NL",32
-"SYSTEMEC-AS - Systemec BV, NL",32
-"PANGEA-CONNECTED - Pangea Connected Limited, GB",32
-"SECFIREWALLAS - F.N.S. HOLDINGS LIMITED, CY",32
-"nktelecom - NKtelecom INC, US",32
-"CQINT-NL - CQ International B.V., NL",32
-"AS-ZXCS - Stichting DIGI NL, NL",32
-"Linfosys - Linfosys BV, NL",28
-"DIGITALOCEAN-ASN - DigitalOcean, LLC, US",28
-"libernet - Menno van Krimpen trading as Libernet, NL",28
-"MAXITEL - MaxiTEL Telecom B.V., NL",28
-"as-speedium - Wijnand Schouten, NL",28
-"Layer23 - atom86 BV, NL",28
-"ODCN-NL-AS - Dienst Uitvoering Onderwijs, NL",28
-"WIFI4ALL-AS - WiFi4all B.V., NL",28
-"KUROIT-AS-AP - Kuroit, IN",28
-"CLYVO-AS - DD webhosting B.V., NL",28
-"AS-DCENT - Dcent Investments BV, NL",28
-"NETLOGICS-AS - ADES BV, NL",28
-"UPCLOUD - UpCloud Ltd, FI",28
-"ANYIT-CONNECTIONS-AS - 2invision Managed Services B.V., NL",28
-"ALSYCON-BV - Alsycon B.V., NL",28
-"IPUBLICATIONS - iPublications Holding B.V., NL",28
-"SWOOTH-AS - Connectra B.V., NL",28
-"DUSTIN-MS-NL - Dustin NL B.V., NL",28
-"MILLENIALHOSTLIMITED-AS-GB - MillenialHost Limited, HK",24
-"H4HOSTING-AS - H4Hosting BV, NL",24
-"WebspaceHosting - Webspace Hosting B.V., NL",24
-"ATINET - @Inet Technology Consultancy B.V., NL",24
-"NL-SVSNET - SvSnet BV, NL",24
-"ESPRESSO-AS - Espresso Gridpoint BV, NL",24
-"M-Line-AS - M-Line Ltd., RU",24
-"AS204765 - 123Telcom BV trading as Partell, NL",24
-"MMATON-AS - Max Maton, NL",24
-"LEADERTELECOMBV-AS - LeaderTelecom B.V., NL",24
-"hostbet - HostBet Cloud Technologies Private Limited, IN",24
-"INTENTION-AS - Intention B.V., NL",24
-"NebiusCloud - Nebius B.V., NL",24
-"ITSOFT-AS - ITSOFT LLC, RU",24
-"UCSYSTEMS - CTA Systems B.V., NL",24
-"HOSTCIRCLE-L-NL - HostCircle B.V., NL",24
-"ITS-AS - Information Technology Support LLC, RU",24
-"datathreeAS - 3DATA LLC, RU",24
-"ENGIE-SERVICES-SDO - EQUANS Zuid-Nederland bv, NL",24
-"Mextal - Mextal B.V., NL",24
-"GNX - GNX B.V., NL",24
-"PRODACOM-AS - Promo Internet B.V., NL",24
-"AS49870-BV - Alsycon B.V., NL",24
-"LERTAS-AS - ENAHOST s.r.o., SK",24
-"LOGIUS-AZ-1 - baten-lastendienst Logius, NL",24
-"KRUIZUA-AS - Kruiz LLC, UA",20
-"JACKMX - Roman Sartov, UA",20
-"FMO-Solutions - FMO Solutions B.V., NL",20
-"COPACO-CLOUD-BACKBONE - Copaco Cloud B.V., NL",20
-"HYBULA - Hybula B.V., NL",20
-"KLAVER-IT - Michiel Klaver, NL",20
-"MIPSGROUP-AS - Mips Group LLC, UA",20
-"XYPHEN - Innovation Harbor B.V., NL",20
-"IT-TWT-AS - UNIDATA S.p.A., IT",20
-"qaleido - Qaleido International BV, NL",20
-"Springer-Nature - Springer Nature B.V., NL",20
-"AS-CM - CM.com N.V., NL",20
-"GLESYS - Glesys AB, SE",20
-"UTELS - SPD Polyudov Aleksandr Igorevich, UA",20
-"QUPRA-AS - Qupra B.V., NL",20
-"ICSOLUTIONS-AS - Dennis Doeve trading as I.C. Solutions, NL",20
-"Summerhosting - SummerHosting sp. z o. o., PL",20
-"Soverin - Soverin B.V., NL",20
-"SkyLink - SkyLink Data Center BV, NL",20
-"SmartCities-AS - Smart Cities Limited Liability Partnership, KZ",20
-"RUDN-AS - PEOPLES FRIENDSHIP UNIVERSITY OF RUSSIA, RU",20
-"Vusam - Daan Jurriaan van Gorkum trading as Vusam V.O.F, NL",20
-"Hestronic - Hestronic BV, NL",20
-"VANCIS - IDDQD-AS, EU",20
-"INTERSTROOM-AS - Interstroom Informatietechnologie BV, NL",20
-"assembly - Assembly B.V., NL",20
-"NETBELA-AS - Tom Emming trading as Netbela, NL",20
-"USA-2022 - NovoServe LLC, US",20
-"gntel-AS - Gamma Communications Nederland B.V., NL",20
-"SIDN - Stichting Internet Domeinregistratie Nederland, NL",20
-"HOSTIN - Rick van der Sterren trading as HostIn, NL",20
-"HostCircle-NL - HostCircle B.V., NL",20
-"ASN-GVRH - NEP Media Solutions B.V., NL",20
-"ATGS-MMD-AS - AT&T Enterprises, LLC, US",16
-"vertebratus-nl-as - Vertebratus B.V., NL",16
-"NFORCE-FTTB-FTTH - NForce Entertainment B.V., NL",16
-"UniscapeB - Uniscape B.V., NL",16
-"XRCservices - NXTcom Nederland BV, NL",16
-"matreon-as - Mick de Jong trading as Matreon IT, NL",16
-"Booking-BV - Booking.com BV, NL",16
-"Mega-AS - Mega Ltd., RU",16
-"SINET-ISP-AS - SINET ISP. LLC, UA",16
-"PerfGrid - Lucas Rolff trading as PerfGrid, NL",16
-"SONA-AS - Sona Network B.V., NL",16
-"FDCSERVERS - FDCservers.net, US",16
-"SOFTLAYER - IBM Cloud, US",16
-"P-PROS - Blue Coded B.V., NL",16
-"NTSERVICE-AS - Rices Privately owned enterprise, UA",16
-"ANNEX-PRO-AS - OOO _SPETSTELECOM-YUG_, RU",16
-"LCPDCO - DC STAR nv, BE",16
-"SECUREDSERVERS-EU - PHOENIX NAP, LLC., US",16
-"TFN-TW - Taiwan Fixed Network, Telco and Network Service Provider., TW",16
-"Skylinq - Fiberlinq B.V., NL",16
-"PRIMONET-AS - PP _Sidor_, UA",16
-"IWSNET - IWS NETWORKS LLC, AM",16
-"SAASNOW - Saas Now B.V., NL",16
-"DIGITAL-REALTY-NL - Digital Realty Netherlands B.V., NL",16
-"MicaIP - Mica IT B.V., NL",16
-"RUDN-AS - Federal State Institution of Higher Professional Education _Peoples Friendship University of Russia_, RU",16
-"BytePark - Rogier Krieger, NL",16
-"CLOUDFLARESPECTRUM - Cloudflare London, LLC, US",16
-"zerospace - Fiber Services B.V., NL",16
-"GTT-BACKBONE - GTT Communications Inc., US",16
-"SOLID - Solid Systems LLC, US",16
-"VYPER-HOSTING - Vyper Hosting Limited, GB",16
-"COOLNET-AS - COOLNET LLC, UA",16
-"MICRODATA-AS - Microdata Aps, DK",16
-"MinVenW-RWS - MinVenW-RWS, NL",16
-"scc - Smith Computer Centrum Computers BV, NL",16
-"INTERBOX-AS - Lubbers Box Telematica BV, NL",16
-"PEACEWEB-CLOUD - PeaceWeb, US",16
-"flowmailer - Flowmailer B.V., NL",16
-"CorporatsiaZNAKAS - Corporatsia ZNAK LLC, RU",16
-"Midion-AS - Midion LLC, RU",12
-"H2B - H2B Assets B.V., NL",12
-"Nikhef - Stichting Nederlandse Wetenschappelijk Onderzoek Instituten, NL",12
-"OPENFIBER - OPENFIBER B.V., NL",12
-"SB_Service-AS - SB:Service Ltd, RU",12
-"TELEMAGIC-AS - Telemagic B.V., NL",12
-"WSO-AS - Wholesale Operator B.V., NL",12
-"TFLABS - Tristan ter Haar trading as TFLabs, NL",12
-"Stroymontag-AS - LLC Sedrus, RU",12
-"WORLDICT - World-ICT B.V., NL",12
-"UKSERVERS-AS - UK Dedicated Servers Limited, GB",12
-"MCC - Schuberg Philis B.V., NL",12
-"GALACTICGROUP-AS - Galactic Group B.V., NL",12
-"ZETA-CLEAN-INTERNET - Zeta Datacenters B.V., NL",12
-"ITSHOSTED-AS - ITS HOSTED, NL",12
-"QWINS-LTD - QWINS LTD, GB",12
-"CHEAPCONNECT - Aeacus B.V., NL",12
-"IPVN-AS01 - IP Visie Networking B.V., NL",12
-"DATAFOREST - dataforest GmbH, DE",12
-"GOOGLE-CLOUD-PLATFORM - Google LLC, US",12
-"YOUTUBE - Google Ireland Limited, IE",12
-"GOOGLE - Google LLC, US",12
-"acknowledge-bc - Acknowledge Benelux B.V., NL",12
-"BAKKER-IT-AS - The Mastermind Holding B.V., NL",12
-"UTELISYS - Utelisys Communications B.V., NL",12
-"OLILO-AS - Olilo UK & Ireland Ltd, GB",12
-"NAML - NAML B.V., NL",12
-"iteeco - Iteeco Cooperatie U.A., NL",12
-"Dlink-AS - D-Link Trade Ltd., RU",12
-"VSERVERLTD - vServer.site LTD, GB",12
-"REBACOM-AS - REBA Communications BV, NL",12
-"MSI-AS - Micro-Star Netherlands Holding B.V., NL",12
-"Cyberfusion - Cyberfusion B.V., NL",12
-"LOWPING-NL - Raoul Brouns is trading as LowPing NL, NL",12
-"H4Y-SR-POOL0 - Hostingforyou B.V., NL",12
-"BREEDBANDDELFT - Stichting Breedband Delft, NL",12
-"Pictura-net - Vitec Memorix B.V., NL",12
-"ITH-AS - ITH Ltd., RU",12
-"as-connectium - Connectium B.V., NL",12
-"RDKIT - RDK IT Solutions B.V., NL",12
-"VOIPQ-AS - VoipQ B.V., NL",12
-"NL-Exa-AS - Exa B.V., NL",12
-"INTERFORCE - Interforce Networks BV, NL",12
-"GREENHOST-AS-AP - Greenhost BV, NL",12
-"GEANT - GEANT Vereniging, NL",12
-"BBNED-AS #1 - Odido Netherlands B.V., NL",12
-"GAMEHOUSEEUROPE - GameHouse Europe BV, NL",12
-"SKYRENT-NL - SkyRENT B.V., NL",12
-"AS-GLOBALTELEHOST - GLOBALTELEHOST Corp., CA",12
-"PLUSINE-AS - Plusine Systems B.V., NL",12
-"RUSPHONE-AS - LLC _ER-Telecom Moscow_, RU",12
-"ZELTELECOM-AS - OOO _Zeltelecom_, RU",12
-"SIMAC-ICT-AS - Simac IT NL B.V., NL",12
-"ivm - Ivent Mobile bv, NL",12
-"LATITUDE-SH - Latitude.sh, US",12
-"Prosveshcheniye-AS - Joint-Stock Company _Prosveshcheniye publishers_, RU",12
-"RONOIT - Rono-IT BV, NL",8
-"AS263824 - Central TV and Internet Limited, BZ",8
-"nethuk2 - NETH LTD, GB",8
-"ZOHO-EU - ZOHO Corporation B.V, NL",8
-"PeakFactory - PeakFactory BV, NL",8
-"QSP-AS - Quality Service Provider BV, NL",8
-"colocatel-inc - ColocaTel Inc., SC",8
-"GLN-AS - Eugene N. Polishchuk, UA",8
-"BASEIP - Base IP B.V., NL",8
-"MATRIXDATA - Matrix DATA B.V., NL",8
-"LC-VBOXX - vBoxx B.V., NL",8
-"ServiceCloud-AS - ServiceCloud Ltd., RU",8
-"CEB-AS - NEXENT BANK N.V., NL",8
-"interedge - InterEdge B.V., NL",8
-"ITCREATION - IT Creation B.V., NL",8
-"PIO-Hosting - PIO-Hosting GmbH, DE",8
-"BittenBytes - Bram Wittendorp trading as BittenBytes, NL",8
-"Serverius-Users-as - Serverius Holding B.V., NL",8
-"ESOLUTIONS-AS - E-Solutions BV, BE",8
-"TRIBION - Tribion B.V., NL",8
-"Mevspace - MEVSPACE sp. z o.o., PL",8
-"DEANONE-AS - Gamma Communications Nederland B.V., NL",8
-"HOASTED - Hoasted B.V., NL",8
-"NETCO_TECHNOLOGY - Netco Technology B.V., NL",8
-"JSCBusinessandTechnologyServicesAS - Business & Technology Services LLP, KZ",8
-"PELICAN-ICT - PELICAN ICT BV, NL",8
-"mediacaster-AS - Mediacaster B.V., NL",8
-"NETGUARD-AS - Falco IPR BV, NL",8
-"Veltrade-AS - Veltrade LLC, RU",8
-"McCloud - McCloud.nl B.V., NL",8
-"SERVERSTARTERHOST - Server Starter Host LLC, US",8
-"METANNET-AS - METANNET LLC, UA",8
-"GEANT_IAS_VRF - GEANT Vereniging, NL",8
-"VIBEGAMES - VibeGAMES B.V., NL",8
-"REDWOOD-AS - Redwood Software Nederland B.V., NL",8
-"ELIVELD-ICT-AS - Eliveld ICT B.V., NL",8
-"SMEERBOEL-AS - SURF B.V., NL",8
-"AS-DATABALANCE - Databalance Services B.V., NL",8
-"JDSERVICE - JD Service Texel B.V., NL",8
-"Speakup - Speakup B.V, NL",8
-"WRIKE-AS - Wrike, Inc., US",8
-"INFONL-AS - Info.nl Holding B.V., NL",8
-"NETONE-NL - Peter-Paul Maria Kurstjens, NL",8
-"MITSERV - MITServ B.V., NL",8
-"HollandDatacentersBV - Holland Datacenters B.V., NL",8
-"AMIGOS-AS - LLC NTT, RU",8
-"SONEXUS-AS - Sonexus B.V., NL",8
-"ACCENTURE-LABS - WorldStream B.V., NL",8
-"mainxs - MainXS Group B.V., NL",8
-"HETZNER-AS - Hetzner Online GmbH, DE",8
-"Publicloud - Public Cloud Ltd., BG",8
-"TheNationalBankoftheKyrgyzRepublicAS - The National Bank of the Kyrgyz Republic, KG",8
-"ipcentral - GBL ICT B.V., NL",8
-"N-Telecom-AS - N-Telecom Ltd, RU",8
-"SUNLIGHT-AS - LLC _SUNLIGHT_, RU",8
-"briantbroadband - Briant Broadband Limited, GB",8
-"Verizon-dual-homed-customers - Verizon Nederland B.V., NL",8
-"ASBKN - Belastingdienst, NL",8
-"iunxi - iunxi B.V., NL",8
-"ii-net-AS - Maximum-Net LLC, UA",8
-"WH2A - WH2A B.V., NL",8
-"IU-Net - Bizway BV, NL",8
-"WKHB-AS2 - WF Konijnenberg Holding B.V., NL",8
-"Kushkhov-AS - Individual entrepreneur Kushkhov Azret Ali Alisakhovich, RU",8
-"NETLOJIK-BT - Netlojik Bilgi Teknolojileri Sanayi ve Ticaret Limited Sirketi, TR",8
-"magnasolutions - Magna Solutions BV, NL",8
-"ASN-DATAPLACE - Eurofiber Cloud Infra B.V., NL",8
-"HPS - SLTN Telecom Professional Services B.V., NL",8
-"RGTN - Redworks B.V., NL",8
-"DT-IT - Internet B.V, NL",8
-"EQUINIX-NL-ASN - Equinix (Netherlands) B.V., NL",8
-"PHAROAH-AS - Pharoah Tools Limited, GB",8
-"STOLOTO - JSC _TC _Center_, RU",8
-"AS-ISOL - Inmarsat Solutions B.V., NL",8
-"EVOCATIVE-GLOBAL - Krypt Technologies, US",8
-"ST - Schiphol Telematics B.V., NL",8
-"LIMESTONENETWORKS - Limestone Networks, Inc., US",8
-"Sysactive - SysActive B.V., NL",8
-"HOPCOUNT - Hopcount Limited, NZ",8
-"IST-AS - Informacines sistemos ir technologijos, UAB, LT",8
-"CyberNetworks - T. van den Heuvel Holding B.V., NL",8
-"UPCLOUDUSA - UpCloud USA Inc, US",8
-"CLOUDZILLA - Cloudzilla BV, NL",8
-"TIM427 - Tim de Boer trading as tim427.net, NL",8
-"SABOTAGE - SABOTAGE LLC, US",4
-"ZXfactory-AS - Capitar IT Group BV, NL",4
-"HACK-DV - Yannick Hack, DE",4
-"VIRTIX - SABRI-BERISHA, NL",4
-"AS-24X7ICT - 24x7 Hosting B.V., NL",4
-"FLEXYZ - Flexyz B.V., NL",4
-"SmIT-AS - SMIT Ltd, RU",4
-"ASSPDChernega - SPD Chernega Aleksandr Anatolevich, UA",4
-"NebiusPA10 - Nebius B.V., NL",4
-"ACTIVEHOST-RU-AS - _ActiveHost RU_ LLC, RU",4
-"TWO-HIP - 2Hip Enterprises B.V., NL",4
-"YISP-AS - NovoServe B.V., NL",4
-"USI-AS - USI-AS, NL",4
-"DEEPMEDIA-AS - Deep Media / V.A.J. Bruijnes (sole proprietorship), NL",4
-"FUGA_NL_1 - Cyso Group B.V., NL",4
-"KRGOVUA-AS - Executive Committee of the Kryvyi Rih City Council, UA",4
-"NewRadio-AS - LLC _Company New Radio_, RU",4
-"VOM - VOLYN OPTICAL NETWORKS LLC, UA",4
-"TRAVSYS-AS - Travsys BV, NL",4
-"Svyazenergo-AS - LLC _Svyazenergo_, RU",4
-"CWI-NL - CWI-NL, NL",4
-"ALTERNATIVA-NET - PE NIKOLAYENKO NIKOLAY IVANOVICH, UA",4
-"CoreISP - CoreISP Group Limited, GB",4
-"VIADATA-AS - CTNET ICT Infrastructuur B.V, NL",4
-"XS-ANYWHERE-AS - XS Anywhere B.V., NL",4
-"DIEDERIK-AS - Diederik Focko de Zee, NL",4
-"BroadbandEU - BroadbandNL B.V., NL",4
-"neveltech - Al-marhalla Al-taliya Information Technology Holding Company Ltd, SA",4
-"nl-surfboard - Surfboard Holding BV, NL",4
-"DIGI-RO - DIGI ROMANIA S.A., RO",4
-"SRVN-AS - Des Capital B.V., NL",4
-"Chernogolovka-AS - OOO _UK _Chernogolovka_, RU",4
-"IS-AS-1 - Interserver, Inc, US",4
-"setanta - Setanta Investments B.V., NL",4
-"BEEONE - BeeOne B.V., NL",4
-"CONSCIA-NL-202918 - Conscia Nederland B.V., NL",4
-"VAARTFIBER-AS - Stichting VaartFiber, NL",4
-"GOUDA - Gemeente Gouda, NL",4
-"BEZEQ-INTERNATIONAL-AS - Bezeq International Ltd., IL",4
-"BNG - Stichting Nederlands Instituut voor Beeld en Geluid, NL",4
-"Biocad_AS - Biocad JSC, RU",4
-"MTTM-AS - _Company _Urban telecommunications transport networks_ LLC, UA",4
-"Cyber-Telecom-AS - Cyber-Telecom LTD, RU",4
-"Lifestream-AS - Lifestream Ltd, RU",4
-"ASN-Greenet - Greenet Netwerk BV, NL",4
-"MJLO - MobielWerkt B.V., NL",4
-"IPNG - IPng Networks GmbH, CH",4
-"Connect-AS - LLC _Connect_, RU",4
-"ASN-MGTS-USPD - PJSC Moscow city telephone network, RU",4
-"PRIVATE-NETWORKS - Private Networks Labs LLC, US",4
-"CLOUDEFENCE - Cloudefence B.V., NL",4
-"PEKITEL-AS - PEKITEL Ltd., RU",4
-"crossivity - Crossivity bv, NL",4
-"ASN-WERITECH - Weritech B.V., NL",4
-"formicidae-holdings - Formicidae Holdings B.V., NL",4
-"AltStack - Florian Overkamp, NL",4
-"OVH - OVH SAS, FR",4
-"DOMINOICT - Dustin NL B.V., NL",4
-"SECURESHIELD - SECURESHIELD SOLUTIONS LLC, US",4
-"ITB2 - ITB-Kwadraat BV, NL",4
-"as-istqservers - Istqrar for Servers Services Ltd, JO",4
-"FIBERNOORD-ASN - Fiber Noord BV, NL",4
-"Hybrid-AS - Hybrid LLC, RU",4
-"WZ-US-40824 - Webzilla Inc., US",4
-"IT-service-AS - IT-service LLC, RU",4
-"NextGenWebs-NL - NextGenWebs, S.L., ES",4
-"FAELIX - Faelix Limited, GB",4
-"IONOS-AS - IONOS SE, DE",4
-"MOBITION-AS - Mobition BV, NL",4
-"E-Moskva-AS - Joint Stock Company _Electronic Moscow_, RU",4
-"CallHosted-AS - Dstny Global Services NL B.V., NL",4
-"AXIT-AS - Axit Automatisering B.V., NL",4
-"ZAYO-6461 - Zayo Bandwidth, US",4
-"DIGITAL-REALTY-DE - Digital Frankfurt GmbH, DE",4
-"SouthernHill - SouthernHill BV, NL",4
-"A-LINK - Alfa Link LLC, UA",4
-"DATACENTRUMGRONINGEN - Datacenter Groningen B.V., NL",4
-"Telecom-Uslugi-AS - LLC _Telecom-Uslugi_, RU",4
-"MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",4
-"TEAMINTERNET-CA-AS - Team Internet AG, DE",4
-"DOMINET-AS - _DOMINET_ LLC, UA",4
-"INWX - InterNetworX Management GmbH, DE",4
-"AS11816 - SERVICIO DI TELECOMUNICACION DI ARUBA (SETAR) N.V., AW",4
-"TelServ - Bird B.V., NL",4
-"AS60880 - Horizon Telecom B.V., NL",4
-"SINOWORLDWIDE - SINO WORLDWIDE TRADING LIMITED, HK",4
-"PROXSYS-AS - PROXSYS B.V., NL",4
-"ROCO-HOST - ROCO HOST LTD, GB",4
-"FOURPLEX-ASN - Fourplex Telecom LLC, US",4
-"ISTQSERVERS-AS - Istqrar for Servers Services Ltd, JO",4
-"Sdnbucks - SDNBUCKS BV, NL",4
-"IP-SECURITY - IP-SecurITy B.V., NL",4
-"BLS-HOSTING-AS - BLS media GmbH, DE",4
-"AirLink-AS - AirLink Ltd., RU",4
-"SCHUERLEINIT-AS - Jan Schuerlein trading as _Schuerlein IT_, DE",4
-"SCANIA-AS - Scania CV AB, SE",4
-"GM-AS - Gemeente Maastricht, NL",4
-"Cyberology-AS - Church of Cyberology, NL",4
-"G1-AS - G1 Entertainment LLC, RU",4
-"QUALCOMM - QUALCOMM (UK) LIMITED, GB",4
-"BASEFARM-ASN - Orange Business Digital Norway AS, NO",4
-"OTTCLUB-AS - INTERNET MEDIA STREAM LTD, GB",4
-"INFOR-AS30800 - Infor (Deutschland) GmbH, DE",4
-"FiberTelecom-AS - Fiber Telecom Ltd, RU",4
-"GulfBridgeInternational - Gulf Bridge International Inc., VG",4
-"HYBRID-Poland - HYBRID ADTECH SP.Z.O.O., PL",4
-"GAGRATEL-AS - _Gagra Telecom_ LLC, RU",4
-"FIBRECAST - Fibrecast Ltd., GB",4
-"COLODEE-AS-AP - COLODEE DIGITAL NETWORK CO.,LTD., TH",4
-"triplon-as - Triplon BV, NL",4
-"BakkerSpees - Bakker & Spees BV, NL",4
-"ICTShift - Marco Tiggelaar trading as Key4ce, NL",4
-"Zorgring-AS - Stichting Zorgring Noord Holland Noord, NL",4
-"Itelma-AS - LLC NPP _Itelma_, RU",4
-"XSBYTE - NetGrid Holding B.V., NL",4
-"RELIANCEJIO-IN - Reliance Jio Infocomm Limited, IN",4
-"PUSIC-JURAJ-AS - Pusic Jurai, ES",4
-"vri - Gemeente Amsterdam, NL",4
-"ITS-PRO-AS - ITS PRO Ltd., RU",4
-"CLEARSTACK - ClearStack B.V., NL",4
-"UNSPECIFIED - GKU _Mosgortelecom_, RU",4
-"AMS-IX1 - Amsterdam Internet Exchange B.V., NL",4
-"EISIT - Eis S.r.l., IT",4
-"netbase - NetBase BV, NL",4
-"EMANGO - Emango Internet Services B.V., NL",4
-"DIVD - Stichting Dutch Institute for Vulnerability Disclosure, NL",4
-"Fortytwo - Fortytwo Security BV, NL",4
-"NETRACK-AS - Start2 LLC, RU",4
-"CLOUDIE-AS-AP - Cloudie Limited, HK",4
-"ERITAP-AS - Arend Brouwer, NL",4
-"SOLVENTO-AS - Shyvan Gielissen trading as Solvento, NL",4
-"RTVNoord-AS - Stichting RTV Noord, NL",4
-"LAYER7-MITIGATION - Layer7 Technologies Inc, US",4
-"CGI-Nederland-BV - CGl Nederland B.V., NL",4
-"SPECTRE - Spectre Operations B.V., NL",4
-"AS-DESEQUITY - Des Equity LLC, US",4
-"BASEIP-LAX - Base IP B.V., NL",4
-"MIAC-AS - State Budgetary Health Care Institution of Arkhangelsk Region - Medical Information and Analytical Centre, RU",4
-"CAPGE-HOSTING-MRO - CAPGEMINI AMERICA, INC., US",4
-"Signet-AS - Signet B.V., NL",4
-"ANTHEIA - NSI (Holdings) Limited, GB",4
-"CityNet - Niccolo Pietrobon, IT",4
-"NL-QSIT - P. van den Belt trading as _QSIT_ V.O.F., NL",4
-"Systematic-AS - Systematic Ltd, RU",4
-"RTMNETWORKS-AS - RTM Networks B.V., NL",4
-"JTC-AS8697 - Jordan Telecommunications PSC, JO",4
-"AXUSHOST - AxusHost B.V., NL",4
-"Fabrika-Kukhnya-AS - Fabrika-Kukhnya Ltd., RU",4
-"AS_ALLSYSTEMS - Allsystems B.V., NL",4
-"MUA0351 - Military unit A0351, UA",4
-"CIRCLEB-ASN - Circle B B.V., NL",4
-"GRNCLOUD-AS - 42tech.solutions B.V., NL",4
-"FEMOIT - FEMO IT SOLUTIONS LIMITED, GB",4
-"IPONE - IP-ONE B.V., NL",4
-"BYTESNET-AS - Eurofiber Cloud Infra B.V., NL",4
-"Olymp-AS - JOINT-STOCK COMPANY _ZENTR_, RU",4
-"SprintCDN - PE Brezhnev Daniil, UA",4
-"MOD-EU - Mod Mission Critical LLC, US",4
-"Renlife-AS - Renaissance Life Insurance Company Limited, RU",4
-"Atos-NL-AS - Eviden Netherlands B.V., NL",4
-"hostman - Hostman LTD, CY",4
-"ARCUSIT-AS - Arcus IT Managed Services B.V., NL",4
-"BUSINESSCONNECT-BELGIUM - Today Concepts B.V., NL",4
-"PINKROCCADE - Pinkroccade HealthCare B.V., NL",4
-"HOST-AS-AP - Host Universal Pty Ltd, AU",4
-"EVERGREEN-AS - LLC GAAL-S, RU",4
-"GALAKTIKA-AS - FOP Vitaly Podkhalyuzin Evgenyevich, UA",4
-"CCV - CCV Group B.V., NL",4
-"EquensWorldline - equensWorldline SE, NL",4
-"glaslokaal - Stichting Glaslokaal, NL",4
-"AARTSEN - Aartsen Breda B.V., NL",4
-"iac-spb-as - ST. PETERSBURG STATE PUBLIC INSTITUTION _ST. PETERSBURG INFORMATION AND ANALYTICAL CENTER_, RU",4
-"isec-asn - ISECLAYER INC, MH",4
-"ICT-Teamwork-Continuity - ICT Teamwork Continuity Services B.V., NL",4
-"SEABONE-NET - TELECOM ITALIA SPARKLE S.p.A., IT",4
-"MOZOLUK-AS - FOP _Mozoluk Vladimir Arkadievich_, UA",4
-"ACC-ICT-PHC-D - ACC ICT B.V., NL",4
-"DEMENIN-AS - DEMENIN B.V., NL",4
-"VK-EU-Telford - Viking Office Europe B.V., NL",4
-"PROSAICLOUD - Quentin Dacquet, FR",4
-"LDCOMNET - Societe Francaise Du Radiotelephone - SFR SA, FR",4
-"KPN-Corporate-Market - KPN B.V., NL",4
-"nomobo - Nomobo B.V., NL",4
-"RAM-NL - Ram Mobile Data (Netherlands) B.V., NL",4
-"TiMMiT - Tim Schoondergang trading as TIMMIT.NL, NL",4
-"Synovate_Comcon-AS - Ipsos Comcon LLC, RU",4
-"Digital-city-AS - Digital city LLC, RU",4
-"EUROPOOL-AS - European Police Office (EuroPol), NL",4
-"hrzn-hosting - Horizon Hosting Limited, GB",4
-"CASE-ELECTRONICS - Case Telecom B.V., NL",4
-"CLOUDNETWORKS - Cloud Networks B.V., NL",4
-"DVGlobalBV - D&V Global B.V., NL",4
-"RTD - Orange Romania S.A., RO",4
+"TRANSIP-AS - Signet B.V., NL",5519
+"LEASEWEB-NL-AMS-01 - LeaseWeb Netherlands B.V., NL",4916
+"AKAMAI-LINODE-AP - Akamai Connected Cloud, SG",4750
+"KPN - KPN B.V., NL",2936
+"TNF-AS - Vodafone Libertel B.V., NL",2829
+"ADVANCEDHOSTERS-AS - DataWeb Global Group B.V., NL",1615
+"PODAON - Podaon SIA, LV",1606
+"HOSTKEY-AS - HOSTKEY B.V., NL",1400
+"Odido - Odido Netherlands B.V., NL",1377
+"WorldStream - WorldStream B.V., NL",1352
+"CLDIN-NL - Your Hosting B.V., NL",1095
+"HOSTNET - Hostnet B.V., NL",931
+"SERVERS-COM - Servers.com, Inc., US",821
+"COGENT-174 - Cogent Communications, LLC, US",813
+"PODAON - NovoServe B.V., NL",762
+"KEEN-AS - KeenSystems B.V., NL",729
+"KABELFOON - DELTA Fiber Nederland B.V., NL",641
+"ROYALE-AS - RoyaleHosting BV, NL",611
+"NL-BIT - BIT BV, NL",557
+"ONECOM - One.com A/S, DK",543
+"WEBZILLA - Webzilla B.V., NL",527
+"Liteserver - The Infrastructure Group B.V., NL",515
+"AS-ITGLOBALCOM - ITGLOBAL.COM NL B.V., NL",439
+"NFORCE - NForce Entertainment B.V., NL",430
+"NABL-AS - N-able Acquisition Company B.V., NL",377
+"SIAMDATA-TH - Siamdata Communication Co.,Ltd., TH",358
+"TILAA - Tilaa B.V., NL",319
+"XL-AS - Signet B.V., NL",302
+"SURFNET-NL - SURF B.V., NL",301
+"UNISERVER-AS - Uniserver Internet B.V., NL",270
+"Serverius-as - Serverius Holding B.V., NL",260
+"FREEDOMINTERNET - Freedom Internet BV, NL",257
+"SpectraIP - SpectraIP B.V., NL",243
+"InfoPact-AS - Infopact Netwerkdiensten B.V., NL",242
+"NEDZONE-AS - Eurofiber Cloud Infra B.V., NL",225
+"Greenhost - Greenhost BV, NL",169
+"GLOBALLAYER - Global Layer B.V., NL",167
+"CYSO-AS - Cyso Group B.V., NL",167
+"podaon-pl-1 - Podaon SIA, LV",166
+"NOVOSERVE-AS - NovoServe B.V., NL",162
+"WEDARE - We Dare B.V., NL",159
+"i3Dnet - i3D.net B.V, NL",159
+"onehostplanet - Onehostplanet s.r.o., CZ",147
+"COMBELL-AS - Combell NV, BE",146
+"TrueServer-AS - TrueFullstaq B.V., NL",143
+"CJ2-AS - CJ2 Hosting B.V., NL",142
+"SERVIHOSTING-AS - AIRE NETWORKS DEL MEDITERRANEO SL UNIPERSONAL, ES",139
+"INT-NETWORK - IP Volume inc, SC",138
+"PREVIDER-AS - Previder B.V., NL",137
+"NL-SOLCON - Solcon Internetdiensten B.V., NL",135
+"Equinix - Equinix (EMEA) Acquisition Enterprises B.V., NL",133
+"A2B - A2B IP B.V., NL",133
+"VikingHost - Viking Host B.V., NL",130
+"FUNDAMENTS-AS - Fundaments B.V., NL",127
+"PROLOCATION - Prolocation B.V., NL",124
+NA,118
+"NEXTPERTISE - Nextpertise B.V., NL",115
+"METAREGISTRAR - Metaregistrar B.V., NL",114
+"ABELOHOST - Abelohost BV, NL",113
+"Interconnect - ML Consultancy, NL",111
+"VOIZXL-AS - voizXL B.V., NL",110
+"AMAZON-02 - Amazon.com, Inc., US",106
+"Snel - Snel.com B.V., NL",103
+"ONE-NETWORK - dogado GmbH, DE",103
+"AS-EUROFIBER - Eurofiber Nederland BV, NL",100
+"WGIX - WGIX, US",98
+"ASN-ROUTIT - Routit BV, NL",96
+"Procolix - ProcoliX B.V., NL",95
+"TUDELFT-NL - SURF B.V., NL",93
+"FREE RANGE CLOUD - Free Range Cloud Hosting Inc., CA",91
+"I-3 - N-able Technologies, Inc., US",91
+"ASDETUK - Hivelocity LLC, US",91
+"INTERNET-SPEECH-AND-PRIVACY-LLC - IncogNet LLC, US",89
+"MADEALA TELECOM TECHNOLOGY - MADEALA TELECOM TECHNOLOGY INC, US",88
+"DUOCAST-AS - Duocast B.V., NL",87
+"ASN-ROUTELABEL - RouteLabel V.O.F., NL",87
+"Dedifix - Dedifix BV, NL",86
+"TUXIS - The Internet Engineering Group B.V., NL",82
+"FIBO - Fiber Operator B.V., NL",80
+"quickhostuk - QuickHostUK Limited, GB",79
+"REDHOSTING-AS - Enreach Netherlands B.V., NL",79
+"AKAMAI-ASN1 - Akamai International B.V., NL",78
+"ULTAHOST-AS - Ultahost, Inc., US",76
+"mijnhost - mijn.host B.V., NL",76
+"HS-HOST9X - Host9x Web Solutions Limited, HK",73
+"MIRhosting - MIRhosting B.V., NL",73
+"BattleHost - KAUA REIS DA SILVA trading as BattleHost, BR",70
+"INTERRACKS-AS - InterRacks B.V., NL",70
+"Enflow - Enflow B.V., NL",69
+"TK-NET - Telkom Internet LTD, SC",68
+"zap-hosting - ZAP-Hosting GmbH, DE",68
+"BITENCY-AS - DODW Holding B.V., NL",68
+"AS-TBNLTN - Signet B.V., NL",66
+"UNITED - United Internet Ltd., RS",66
+"FYFEWEB - FyfeWeb Ltd, GB",66
+"COMPUKOS-AS - DirectVPS B.V., NL",64
+"NETSOLUTIONS - Net Solutions - Consultoria Em Tecnologias De Informacao, Sociedade Unipessoal LDA, MO",63
+"GLOBAL-E - Previder B.V., NL",63
+"Windcloud40-as - Windcloud 4.0 GmbH, DE",63
+"HIGH5-NL - High5! B.V., NL",62
+"EQuest-AS - e-Quest IT-diensten B.V., NL",61
+"AS268624 - Gamers Club Ltda, BR",61
+"BEST-LINE-AS - Best Line Ltd., RU",59
+"UTWENTE-AS - SURF B.V., NL",59
+"services-1337-gmbh - 1337 Services GmbH, DE",57
+"AHASEND - AhaSend B.V., NL",55
+"ALTUS - AltusHost B.V., NL",54
+"RSMedia-AS - RS-Media LLC, RU",52
+"HIZAKURA-NL - Hizakura B.V., NL",52
+"BlackGATE - BlackGATE B.V., NL",51
+"signetbreedband - Signet B.V., NL",51
+"TRANS-IX-AS - Trans-iX B.V., NL",50
+"MOJHOST-EU - MOJOHOST B.V., NL",50
+"ETHERON - Lars Jannick Volkers trading as Etheron Hosting, NL",50
+"NL-INTERMAX - Intermax Group B.V., NL",50
+"ADYEN - Adyen N.V., NL",49
+"NGNETWORKS - NG-BLU Networks B.V., NL",48
+"hosting2go - Hosting 2 GO B.V., NL",47
+"COLOCLUE-AS - Netwerkvereniging Coloclue, NL",46
+"NL-PRIVATEHOST - Private Host BV, NL",45
+"NETH-AS - NETH LLC, UA",45
+"XTOM-JAPAN - xTom Japan Corporation, JP",44
+"NTPCL-AS-AP - National Telecom Public Company Limited, TH",43
+"QONNECTED-AS - Qonnected B.V., NL",42
+"eFolder-NL - eFolder Holdings B.V., NL",42
+"host-industry - HOSTING INDUSTRY LIMITED, GB",41
+"GreenCloud - Greencloud LLC, VN",40
+"MC-NODE-AS - Stef Herman Anton Wolters trading as MC-Node, NL",39
+"Access2IT - Access2.IT Group B.V., NL",38
+"MYLOC-AS - WIIT AG, DE",37
+"MYGAMES - MY.GAMES B.V., NL",37
+"greenedge - GreenEdge B.V., NL",36
+"FIBERRING - LeaseWeb Network B.V., NL",36
+"X2COM - X2com BV, NL",36
+"AS-HOSTINGER - Hostinger International Limited, CY",35
+"SolidBE - SolidBE BV, NL",35
+"OSSO - OSSO B.V., NL",35
+"AKAMAI-AS - Akamai Technologies, Inc., US",34
+"Esmero - Esmero Holding B.V., NL",34
+"HostSlim-Global-Network - HOSTSLIM OU, EE",33
+"DDF-AS - DDFR IT Infra & Security B.V., NL",33
+"PLINQ - PLINQ BV, NL",33
+"ALLHOSTINGS - Innovative IT Solutions LLC, RU",32
+"SIGNET-AS - Signet B.V., NL",32
+"KPN-INTERNEDSERVICES - Vancis IP B.V., NL",32
+"DMA-AS - Shaun O_Neil, trading as DMA Computer Services, NL",32
+"AS-ITGLOBALCOM-KZ - ITGLOBAL.COM RUS Ltd, RU",31
+"ASIMO-AS - Asimo Networks B.V., NL",31
+"NL-NETVISIT - Netvisit B.V., NL",31
+"ZYLON-AS - Bas Smit trading as Zylon, NL",31
+"EuroNet - Euronet Communications B.V., NL",30
+"weserve - Weserve B.V., NL",30
+"XXLnet - XXLnet B.V., NL",30
+"XTOM - xTom Pty Ltd, AU",30
+"AS-F2X - Fiber Services B.V., NL",30
+"SEWAN-NL - Sewan Nederland B.V., NL",30
+"FUSIX-AS - Fusix Networks B.V., NL",29
+"AS-XYNTA - Onworx BV, NL",29
+"WholesaleConnections - Wholesale Connections B.V., NL",28
+"EKACOD-AS - Vichislitelniy Centr Ltd., RU",27
+"ATOM86-AS - atom86 BV, NL",27
+"INFRAPOD - Jeroen van Brink trading as Infrapod, NL",27
+"CLOUDFORESTCOLTD-AS-AP - CLOUDFOREST CO., LTD., TH",27
+"VBOXX - vBoxx B.V., NL",27
+"CITIC - CITIC Telecom CPC Netherlands B.V., NL",27
+"XTOM-AS-JP - xTom, JP",26
+"Servada - Servada B.V., NL",26
+"ArenHost - Hadi Santosa, ID",26
+"IPCONNECT - IP Connect Inc, SC",25
+"IP-EEND-AS - SURF B.V., NL",24
+"AS268581 - QNAX LTDA, BR",24
+"RIPE-NCC-AS - Reseaux IP Europeens Network Coordination Centre (RIPE NCC), NL",24
+"CRITICALCORE - Critical Core BV, NL",24
+"LUCK-NETO-01 - NetO Corp, US",24
+"HS - Host Sailor Ltd, AE",23
+"DTLN - Data Storage Center JSC, RU",23
+"INFRABLOCKS - The Infrastructure Group B.V., NL",23
+"ThreeData-AS - 3DATA LLC, RU",23
+"ASNET - Baxet Group Inc., US",23
+"SPEEDXS-AS - DELTA Fiber Nederland B.V., NL",23
+"MEZZAMI-AS - Mezzami B.V., NL",22
+"XTOM - xTom GmbH, DE",22
+"ASSEFLOW - Seflow s.r.l., IT",22
+"PAYLOGIC - EVENTIM Holding Benelux B.V., NL",22
+"DATAFIBER - DataFiber Group B.V., NL",21
+"ONIDEL-AS-AP - Onidel Pty Ltd, AU",21
+"FOURCONSULT - 4Consult B.V., NL",21
+"CORENET - Core Network Services FZE, AE",21
+"VSHOSTING - VSHOSTING-CDN, CZ",21
+"GREENMINIHOST - Green Mini host BV, NL",21
+"XTOM - xTom, HK",21
+"CLOUDNL-AS - CLOUD.nl B.V., NL",21
+"ASN-POSTA - Posta Slovenije d.o.o., SI",21
+"JONAZ - Jonaz B.V., NL",20
+"NETREBEL - netrebel b.v., NL",20
+"SMARTWAVE-BROADBAND-AS - SmartWave Broadband LLC, US",20
+"Rapidgator-AS - ULTRANEX LTD, CY",20
+"INIOS-AS - Inios Oy, FI",20
+"NubaCloud - NubaCloud B.V., NL",19
+"FBX-AS - FiberXpress BV, NL",19
+"HOSTGHOST-AS - HostGhost B.V., NL",19
+"A1-DC - A1 Internet BV, NL",19
+"EKMEDIA - EK-Media B.V., NL",19
+"voipedeu - Voiped Wholesale BV, NL",19
+"logicforge - LogicForge Limited, GB",19
+"NL-CAVEO - Caveo Internet BV, NL",18
+"Go-Trex - Go-Trex Holding BV, NL",18
+"BIGNET-AS - _AS43668_ LLC, UA",18
+"NL-KABELTEX - Netwerk Exploitatiemaatschappij B.V., NL",18
+"WORLDSTREAM - WorldStream B.V., NL",18
+"AS-GLOBALTELEHOST - GTHost, US",18
+"AS-SERVERION - Des Capital B.V., NL",18
+"nl-1key - 1KEY BV, NL",18
+"RACKGENIUS - RackGenius, US",18
+"TECHNOBERG - Technoberg Beheer B.V., NL",17
+"AS53107 - EVEO S.A., BR",17
+"CDNEXT - Datacamp Limited, GB",17
+"CDNetworks - GLOBAL CLOUD NETWORK LLC, RU",17
+"ThreeDATA-AS - 3DATA LLC, RU",17
+"LibertyGlobal - Liberty Global Europe Holding B.V., NL",17
+"GD-EMEA-DC-LD5 - Heart Internet limited, GB",16
+"COMNET-AS - Comnet Internetional BV, NL",16
+"ESAB-AS - 31173 Services AB, SE",16
+"FLEXYNODE-AS - Bram de Graaf trading as FlexyNode, NL",16
+"GL-IX-AS - Totaalnet Internet Works B.V., NL",16
+"NETROUTING-AS - Netrouting B.V., NL",16
+"Century-LTD - CenturyNetworks Ltd, MH",15
+"LUNA - Ekco B.V., NL",15
+"SPACECORE - SPACECORE SOLUTION LTD, GB",15
+"SIT - ExtraIP B.V., NL",15
+"hostshield - HOSTSHIELD LTD, GB",15
+"VXbits - Vertixo BV, NL",15
+"Infracom-AS - Infracom Holding B.V., NL",15
+"gidpro - GidPro BV, NL",14
+"BIP-AS - Eweka Internet Services B.V., NL",14
+"VIRTUALXS-AS - Virtual Access Internet BV, NL",14
+"m3networks - M3 Groep BV, NL",14
+"ECHELON-AS - Root Holding B.V., NL",14
+"ASSERVEREASY - Servereasy Srl, IT",14
+"FEROXHOSTING-NET - Luc Haaijer trading as Ferox Hosting, NL",14
+"NL-NEFOS-AS - Nefos IT bv, NL",14
+"SERVAONE - SERVA ONE LTD, GB",14
+"HSCG-AS - Network Operations B.V, NL",14
+"DATAWEB - DataWeb B.V., NL",14
+"IRONHOST - Iron Hosting Centre LTD, GB",13
+"Voys - Devhouse Spindle B.V., NL",13
+"TRIPLE-IT - Triple IT BV, NL",13
+"DCSPINE - Eurofiber Cloud Infra B.V., NL",13
+"CYBERCON - CYBERCON, INC., US",13
+"ColoCenter - ColoCenter b.v., NL",13
+"GAMEPOINT - Gamepoint B.V., NL",13
+"INS-AS - AT&T Enterprises, LLC, US",12
+"TNGNET - TNGNET B.V., NL",12
+"ARTOFAUTOMATION-AS - Art of Automation B.V., NL",12
+"NewVM-AS - NewVM B.V., NL",12
+"GHOSTYNETWORKS - Ghosty Networks LLC, US",12
+"MIRHOSTING-NL - MIRhosting B.V., NL",12
+"CBWS-AS - CBWS Holding B.V., NL",12
+"CleverIT - CleverIT B.V., NL",12
+"EXTRAIP-AS - ExtraIP B.V., NL",12
+"ASN-COMMUNITYFIBRE - Community Fibre Limited, GB",12
+"AS270824 - ENX Services, BR",12
+"BREEDBANDNEDERLAND - Signet B.V., NL",11
+"MOBIELWERKT - MobielWerkt B.V., NL",11
+"TECHTIES-AS - TechTies Inc., SC",11
+"CrownCloud - GWY IT PTY LTD, AU",11
+"VELOXSERV - VeloxServ Communications Ltd, GB",11
+"ZeroPlex - ZeroPlex B.V., NL",11
+"HIVOS - Stichting Hivos, NL",11
+"asbizwaynl - Bizway BV, NL",11
+"NEDERLANDNET-AS - Computel Standby BV, NL",10
+"InternetArchiveEU - InternetArchiveEU, NL",10
+"CheeseHosting - KaasHosting B.V., NL",10
+"ASN-NETHOLDING - Garnier Projects BV, NL",10
+"V6NODE-AS - Ian David Klemm, DE",10
+"PROXILITY-AS - Scalix B.V., NL",10
+"GSLNETWORKS-AS-AP - GSL Networks Pty LTD, AU",10
+"MyGamesSwitzerland - MY.GAMES B.V., NL",10
+"CHOCIZ-AS - Chociz Private Limited, IN",10
+"kavosnl - Kinga de Vos trading as Kavos Vof, NL",10
+"THREE-W-INFRA-AS - 3W Infra B.V., NL",9
+"SKP - SKP B.V., NL",9
+"BUSINESSCONNECT - Today Concepts B.V., NL",9
+"Walhalla__AS30937 - Walhalla Data Center Services SL, ES",9
+"Cloudcontainers - Initworks b.v., NL",9
+"M247 - M247 Europe SRL, RO",9
+"FOON - Digifoon Group B.V., NL",9
+"STEFFANN-DC-AS - S.J.M. Steffann, NL",9
+"ASLD4UNITY - LD4Unity B.V., NL",9
+"VI-PORT-AS - VI-PORT LLC, UA",9
+"NEDAP-AS - Nedap N.V., NL",9
+"GETRONICS_AS - GTN Services B.V., NL",9
+"SOLVINITY-NL - Solvinity B.V., NL",9
+"serac-nl - Serac Applications B.V., NL",9
+"VDSKA-AS - Anton Levin, KG",9
+"ONEOF1SERVERS - 1 of 1 Servers Corp, US",9
+"onecentral - onecentral B.V., NL",9
+"MGHosting - Mark van Ginkel trading as MGHOSTING, NL",9
+"AS28022 - CRISP S.A., CR",9
+"PUBLIEKE-OMROEP-AS - Stichting Nederlandse Publieke Omroep, NL",9
+"as_init3 - Init3 BV, NL",9
+"EstNOC-GLOBAL - EstNOC OU, EE",9
+"CQINT-NL - CQ International B.V., NL",8
+"FIBER01-WOERDEN-AS - Switch Datacenters Amsterdam 6 B.V., NL",8
+"SYSTEMEC-AS - Systemec BV, NL",8
+"NETIFACE-AS - Netiface Limited, GB",8
+"UVA-NL - IDDQD-AS, EU",8
+"PANGEA-CONNECTED - Pangea Connected Limited, GB",8
+"STARGROUP-UA-AS - Stargroup LLC, UA",8
+"CUCI - Cubic Circle B.V., NL",8
+"MYBIT - MyBit Services BV, NL",8
+"IP-PROJECTS - Michael Sebastian Schinzel trading as IP-Projects GmbH & Co. KG, DE",8
+"PETIT-AS - Petit Telecom B.V., NL",8
+"nktelecom - NKtelecom INC, US",8
+"IN2IP-AS - IN2IP-AS, NL",8
+"CLARANET-AS - Claranet Limited, GB",8
+"AS-ZXCS - Stichting DIGI NL, NL",8
+"DEDICATEDNODES-AS - Danny Nieuwenhuis trading as DedicatedNodes, NL",8
+"JSR-IT-BV - JSR IT B.V., NL",8
+"SECFIREWALLAS - F.N.S. HOLDINGS LIMITED, CY",8
+"GOLDENNET - Rabchuk Valentyna Viktorivna, UA",8
+"MAMUTRAHAL - MAMUT RAHAL SOFTWARE - FZCO, AE",8
+"MAXITEL - MaxiTEL Telecom B.V., NL",7
+"CLYVO-AS - DD webhosting B.V., NL",7
+"KUROIT-AS-AP - Kuroit, IN",7
+"WIFI4ALL-AS - WiFi4all B.V., NL",7
+"libernet - Menno van Krimpen trading as Libernet, NL",7
+"SWOOTH-AS - Connectra B.V., NL",7
+"AS-DCENT - Dcent Investments BV, NL",7
+"DIGITALOCEAN-ASN - DigitalOcean, LLC, US",7
+"ODCN-NL-AS - Dienst Uitvoering Onderwijs, NL",7
+"as-speedium - Wijnand Schouten, NL",7
+"DUSTIN-MS-NL - Dustin NL B.V., NL",7
+"IPUBLICATIONS - iPublications Holding B.V., NL",7
+"Layer23 - atom86 BV, NL",7
+"ANYIT-CONNECTIONS-AS - 2invision Managed Services B.V., NL",7
+"NETLOGICS-AS - ADES BV, NL",7
+"UPCLOUD - UpCloud Ltd, FI",7
+"Linfosys - Linfosys BV, NL",7
+"ALSYCON-BV - Alsycon B.V., NL",7
+"LERTAS-AS - ENAHOST s.r.o., SK",6
+"AS204765 - 123Telcom BV trading as Partell, NL",6
+"Mextal - Mextal B.V., NL",6
+"WebspaceHosting - Webspace Hosting B.V., NL",6
+"GNX - GNX B.V., NL",6
+"ESPRESSO-AS - Espresso Gridpoint BV, NL",6
+"LEADERTELECOMBV-AS - LeaderTelecom B.V., NL",6
+"MMATON-AS - Max Maton, NL",6
+"MILLENIALHOSTLIMITED-AS-GB - MillenialHost Limited, HK",6
+"UCSYSTEMS - CTA Systems B.V., NL",6
+"AS49870-BV - Alsycon B.V., NL",6
+"LOGIUS-AZ-1 - baten-lastendienst Logius, NL",6
+"NebiusCloud - Nebius B.V., NL",6
+"PRODACOM-AS - Promo Internet B.V., NL",6
+"ENGIE-SERVICES-SDO - EQUANS Zuid-Nederland bv, NL",6
+"ATINET - @Inet Technology Consultancy B.V., NL",6
+"hostbet - HostBet Cloud Technologies Private Limited, IN",6
+"M-Line-AS - M-Line Ltd., RU",6
+"H4HOSTING-AS - H4Hosting BV, NL",6
+"datathreeAS - 3DATA LLC, RU",6
+"NL-SVSNET - SvSnet BV, NL",6
+"ITSOFT-AS - ITSOFT LLC, RU",6
+"ITS-AS - Information Technology Support LLC, RU",6
+"HOSTCIRCLE-L-NL - HostCircle B.V., NL",6
+"INTENTION-AS - Intention B.V., NL",6
+"GLESYS - Glesys AB, SE",5
+"AS-CM - CM.com N.V., NL",5
+"ASN-GVRH - NEP Media Solutions B.V., NL",5
+"COPACO-CLOUD-BACKBONE - Copaco Cloud B.V., NL",5
+"SIDN - Stichting Internet Domeinregistratie Nederland, NL",5
+"FMO-Solutions - FMO Solutions B.V., NL",5
+"UTELS - SPD Polyudov Aleksandr Igorevich, UA",5
+"XYPHEN - Innovation Harbor B.V., NL",5
+"INTERSTROOM-AS - Interstroom Informatietechnologie BV, NL",5
+"Soverin - Soverin B.V., NL",5
+"IT-TWT-AS - UNIDATA S.p.A., IT",5
+"KRUIZUA-AS - Kruiz LLC, UA",5
+"JACKMX - Roman Sartov, UA",5
+"USA-2022 - NovoServe LLC, US",5
+"HOSTIN - Rick van der Sterren trading as HostIn, NL",5
+"Hestronic - Hestronic BV, NL",5
+"VANCIS - IDDQD-AS, EU",5
+"Summerhosting - SummerHosting sp. z o. o., PL",5
+"SmartCities-AS - Smart Cities Limited Liability Partnership, KZ",5
+"RUDN-AS - PEOPLES FRIENDSHIP UNIVERSITY OF RUSSIA, RU",5
+"SkyLink - SkyLink Data Center BV, NL",5
+"ICSOLUTIONS-AS - Dennis Doeve trading as I.C. Solutions, NL",5
+"Vusam - Daan Jurriaan van Gorkum trading as Vusam V.O.F, NL",5
+"QUPRA-AS - Qupra B.V., NL",5
+"assembly - Assembly B.V., NL",5
+"HostCircle-NL - HostCircle B.V., NL",5
+"gntel-AS - Gamma Communications Nederland B.V., NL",5
+"MIPSGROUP-AS - Mips Group LLC, UA",5
+"qaleido - Qaleido International BV, NL",5
+"KLAVER-IT - Michiel Klaver, NL",5
+"HYBULA - Hybula B.V., NL",5
+"Springer-Nature - Springer Nature B.V., NL",5
+"NETBELA-AS - Tom Emming trading as Netbela, NL",5
+"UniscapeB - Uniscape B.V., NL",4
+"Skylinq - Fiberlinq B.V., NL",4
+"SECUREDSERVERS-EU - PHOENIX NAP, LLC., US",4
+"TFN-TW - Taiwan Fixed Network, Telco and Network Service Provider., TW",4
+"RUDN-AS - Federal State Institution of Higher Professional Education _Peoples Friendship University of Russia_, RU",4
+"matreon-as - Mick de Jong trading as Matreon IT, NL",4
+"LCPDCO - DC STAR nv, BE",4
+"Booking-BV - Booking.com BV, NL",4
+"NFORCE-FTTB-FTTH - NForce Entertainment B.V., NL",4
+"vertebratus-nl-as - Vertebratus B.V., NL",4
+"PFCLOUD - Pfcloud UG (haftungsbeschrankt), DE",4
+"GTT-BACKBONE - GTT Communications Inc., US",4
+"SOLID - Solid Systems LLC, US",4
+"flowmailer - Flowmailer B.V., NL",4
+"MinVenW-RWS - MinVenW-RWS, NL",4
+"INTERBOX-AS - Lubbers Box Telematica BV, NL",4
+"PRIMONET-AS - PP _Sidor_, UA",4
+"DIGITAL-REALTY-NL - Digital Realty Netherlands B.V., NL",4
+"SOFTLAYER - IBM Cloud, US",4
+"Mega-AS - Mega Ltd., RU",4
+"ATGS-MMD-AS - AT&T Enterprises, LLC, US",4
+"zerospace - Fiber Services B.V., NL",4
+"XRCservices - NXTcom Nederland BV, NL",4
+"CLOUDFLARESPECTRUM - Cloudflare London, LLC, US",4
+"BytePark - Rogier Krieger, NL",4
+"SONA-AS - Sona Network B.V., NL",4
+"ANNEX-PRO-AS - OOO _SPETSTELECOM-YUG_, RU",4
+"SINET-ISP-AS - SINET ISP. LLC, UA",4
+"VYPER-HOSTING - Vyper Hosting Limited, GB",4
+"MICRODATA-AS - Microdata Aps, DK",4
+"scc - Smith Computer Centrum Computers BV, NL",4
+"COOLNET-AS - COOLNET LLC, UA",4
+"NTSERVICE-AS - Rices Privately owned enterprise, UA",4
+"PerfGrid - Lucas Rolff trading as PerfGrid, NL",4
+"IWSNET - IWS NETWORKS LLC, AM",4
+"SAASNOW - Saas Now B.V., NL",4
+"PEACEWEB-CLOUD - PeaceWeb, US",4
+"P-PROS - Blue Coded B.V., NL",4
+"MicaIP - Mica IT B.V., NL",4
+"CorporatsiaZNAKAS - Corporatsia ZNAK LLC, RU",4
+"H4Y-SR-POOL0 - Hostingforyou B.V., NL",3
+"ZELTELECOM-AS - OOO _Zeltelecom_, RU",3
+"RUSPHONE-AS - LLC _ER-Telecom Moscow_, RU",3
+"UKSERVERS-AS - UK Dedicated Servers Limited, GB",3
+"ivm - Ivent Mobile bv, NL",3
+"RDKIT - RDK IT Solutions B.V., NL",3
+"ITSHOSTED-AS - ITS HOSTED, NL",3
+"VOIPQ-AS - VoipQ B.V., NL",3
+"SIMAC-ICT-AS - Simac IT NL B.V., NL",3
+"DATAFOREST - dataforest GmbH, DE",3
+"Prosveshcheniye-AS - Joint-Stock Company _Prosveshcheniye publishers_, RU",3
+"INTERFORCE - Interforce Networks BV, NL",3
+"IPVN-AS01 - IP Visie Networking B.V., NL",3
+"OLILO-AS - Olilo UK & Ireland Ltd, GB",3
+"UTELISYS - Utelisys Communications B.V., NL",3
+"BAKKER-IT-AS - The Mastermind Holding B.V., NL",3
+"GREENHOST-AS-AP - Greenhost BV, NL",3
+"BREEDBANDDELFT - Stichting Breedband Delft, NL",3
+"ITH-AS - ITH Ltd., RU",3
+"LOWPING-NL - Raoul Brouns is trading as LowPing NL, NL",3
+"iteeco - Iteeco Cooperatie U.A., NL",3
+"acknowledge-bc - Acknowledge Benelux B.V., NL",3
+"WSO-AS - Wholesale Operator B.V., NL",3
+"PLUSINE-AS - Plusine Systems B.V., NL",3
+"VSERVERLTD - vServer.site LTD, GB",3
+"OPENFIBER - OPENFIBER B.V., NL",3
+"Pictura-net - Vitec Memorix B.V., NL",3
+"Nikhef - Stichting Nederlandse Wetenschappelijk Onderzoek Instituten, NL",3
+"Cyberfusion - Cyberfusion B.V., NL",3
+"GOOGLE-CLOUD-PLATFORM - Google LLC, US",3
+"GOOGLE - Google LLC, US",3
+"YOUTUBE - Google Ireland Limited, IE",3
+"NL-Exa-AS - Exa B.V., NL",3
+"SKYRENT-NL - SkyRENT B.V., NL",3
+"TELEMAGIC-AS - Telemagic B.V., NL",3
+"GEANT - GEANT Vereniging, NL",3
+"LATITUDE-SH - Latitude.sh, US",3
+"CHEAPCONNECT - Aeacus B.V., NL",3
+"BBNED-AS #1 - Odido Netherlands B.V., NL",3
+"MSI-AS - Micro-Star Netherlands Holding B.V., NL",3
+"AS-GLOBALTELEHOST - GLOBALTELEHOST Corp., CA",3
+"GAMEHOUSEEUROPE - GameHouse Europe BV, NL",3
+"SB_Service-AS - SB:Service Ltd, RU",3
+"ZETA-CLEAN-INTERNET - Zeta Datacenters B.V., NL",3
+"REBACOM-AS - REBA Communications BV, NL",3
+"H2B - H2B Assets B.V., NL",3
+"NAML - NAML B.V., NL",3
+"Dlink-AS - D-Link Trade Ltd., RU",3
+"TFLABS - Tristan ter Haar trading as TFLabs, NL",3
+"QWINS-LTD - QWINS LTD, GB",3
+"MCC - Schuberg Philis B.V., NL",3
+"GALACTICGROUP-AS - Galactic Group B.V., NL",3
+"WORLDICT - World-ICT B.V., NL",3
+"Midion-AS - Midion LLC, RU",3
+"Stroymontag-AS - LLC Sedrus, RU",3
+"as-connectium - Connectium B.V., NL",3
+"RGTN - Redworks B.V., NL",2
+"HPS - SLTN Telecom Professional Services B.V., NL",2
+"AS263824 - Central TV and Internet Limited, BZ",2
+"nethuk2 - NETH LTD, GB",2
+"METANNET-AS - METANNET LLC, UA",2
+"SERVERSTARTERHOST - Server Starter Host LLC, US",2
+"LIMESTONENETWORKS - Limestone Networks, Inc., US",2
+"STOLOTO - JSC _TC _Center_, RU",2
+"TheNationalBankoftheKyrgyzRepublicAS - The National Bank of the Kyrgyz Republic, KG",2
+"ipcentral - GBL ICT B.V., NL",2
+"UPCLOUDUSA - UpCloud USA Inc, US",2
+"PHAROAH-AS - Pharoah Tools Limited, GB",2
+"NETLOJIK-BT - Netlojik Bilgi Teknolojileri Sanayi ve Ticaret Limited Sirketi, TR",2
+"Kushkhov-AS - Aliev Zalim Khasanovich, RU",2
+"CyberNetworks - T. van den Heuvel Holding B.V., NL",2
+"IST-AS - Informacines sistemos ir technologijos, UAB, LT",2
+"QSP-AS - Quality Service Provider BV, NL",2
+"interedge - InterEdge B.V., NL",2
+"PELICAN-ICT - PELICAN ICT BV, NL",2
+"ASN-DATAPLACE - Eurofiber Cloud Infra B.V., NL",2
+"GLN-AS - Eugene N. Polishchuk, UA",2
+"INFONL-AS - Info.nl Holding B.V., NL",2
+"PeakFactory - PeakFactory BV, NL",2
+"Serverius-Users-as - Serverius Holding B.V., NL",2
+"ITCREATION - IT Creation B.V., NL",2
+"VIBEGAMES - VibeGAMES B.V., NL",2
+"RONOIT - Rono-IT BV, NL",2
+"BittenBytes - Bram Wittendorp trading as BittenBytes, NL",2
+"JSCBusinessandTechnologyServicesAS - Business & Technology Services LLP, KZ",2
+"NETONE-NL - Peter-Paul Maria Kurstjens, NL",2
+"Publicloud - Public Cloud Ltd., BG",2
+"HollandDatacentersBV - Holland Datacenters B.V., NL",2
+"mainxs - MainXS Group B.V., NL",2
+"ACCENTURE-LABS - WorldStream B.V., NL",2
+"HETZNER-AS - Hetzner Online GmbH, DE",2
+"Verizon-dual-homed-customers - Verizon Nederland B.V., NL",2
+"NETGUARD-AS - Falco IPR BV, NL",2
+"WH2A - WH2A B.V., NL",2
+"IU-Net - Bizway BV, NL",2
+"GEANT_IAS_VRF - GEANT Vereniging, NL",2
+"ii-net-AS - Maximum-Net LLC, UA",2
+"iunxi - iunxi B.V., NL",2
+"magnasolutions - Magna Solutions BV, NL",2
+"ESOLUTIONS-AS - E-Solutions BV, BE",2
+"NETCO_TECHNOLOGY - Netco Technology B.V., NL",2
+"TRIBION - Tribion B.V., NL",2
+"AS-DATABALANCE - Databalance Services B.V., NL",2
+"ASBKN - Belastingdienst, NL",2
+"Mevspace - MEVSPACE sp. z o.o., PL",2
+"HOASTED - Hoasted B.V., NL",2
+"REDWOOD-AS - Redwood Software Nederland B.V., NL",2
+"mediacaster-AS - Mediacaster B.V., NL",2
+"AMIGOS-AS - LLC NTT, RU",2
+"SONEXUS-AS - Sonexus B.V., NL",2
+"McCloud - McCloud.nl B.V., NL",2
+"ELIVELD-ICT-AS - Eliveld ICT B.V., NL",2
+"CEB-AS - NEXENT BANK N.V., NL",2
+"WRIKE-AS - Wrike, Inc., US",2
+"MATRIXDATA - Matrix DATA B.V., NL",2
+"SMEERBOEL-AS - SURF B.V., NL",2
+"PIO-Hosting - PIO-Hosting GmbH, DE",2
+"BASEIP - Base IP B.V., NL",2
+"ZOHO-EU - ZOHO Corporation B.V, NL",2
+"MITSERV - MITServ B.V., NL",2
+"WKHB-AS2 - WF Konijnenberg Holding B.V., NL",2
+"colocatel-inc - ColocaTel Inc., SC",2
+"DEANONE-AS - Gamma Communications Nederland B.V., NL",2
+"Speakup - Speakup B.V, NL",2
+"LC-VBOXX - vBoxx B.V., NL",2
+"JDSERVICE - JD Service Texel B.V., NL",2
+"DT-IT - Internet B.V, NL",2
+"AS-ISOL - Inmarsat Solutions B.V., NL",2
+"Veltrade-AS - Veltrade LLC, RU",2
+"HOPCOUNT - Hopcount Limited, NZ",2
+"EVOCATIVE-GLOBAL - Krypt Technologies, US",2
+"SUNLIGHT-AS - LLC _SUNLIGHT_, RU",2
+"briantbroadband - Briant Broadband Limited, GB",2
+"EQUINIX-NL-ASN - Equinix (Netherlands) B.V., NL",2
+"N-Telecom-AS - N-Telecom Ltd, RU",2
+"ST - Schiphol Telematics B.V., NL",2
+"TIM427 - Tim de Boer trading as tim427.net, NL",2
+"ServiceCloud-AS - ServiceCloud Ltd., RU",2
+"CLOUDZILLA - Cloudzilla BV, NL",2
+"Sysactive - SysActive B.V., NL",2
+"CASE-ELECTRONICS - Case Telecom B.V., NL",1
+"hostman - Hostman LTD, CY",1
+"DIVD - Stichting Dutch Institute for Vulnerability Disclosure, NL",1
+"RTD - Orange Romania S.A., RO",1
+"SOLVENTO-AS - Shyvan Gielissen trading as Solvento, NL",1
+"AltStack - Florian Overkamp, NL",1
+"OVH - OVH SAS, FR",1
+"SECURESHIELD - SECURESHIELD SOLUTIONS LLC, US",1
+"ITB2 - ITB-Kwadraat BV, NL",1
+"FIBERNOORD-ASN - Fiber Noord BV, NL",1
+"WZ-US-40824 - Webzilla Inc., US",1
+"KPN-Corporate-Market - KPN B.V., NL",1
+"RAM-NL - Ram Mobile Data (Netherlands) B.V., NL",1
+"TiMMiT - Tim Schoondergang trading as TIMMIT.NL, NL",1
+"Synovate_Comcon-AS - Ipsos Comcon LLC, RU",1
+"EUROPOOL-AS - European Police Office (EuroPol), NL",1
+"hrzn-hosting - Horizon Hosting Limited, GB",1
+"CLOUDNETWORKS - Cloud Networks B.V., NL",1
+"DVGlobalBV - D&V Global B.V., NL",1
+"SABOTAGE - SABOTAGE LLC, US",1
+"CityNet - Niccolo Pietrobon, IT",1
+"NL-QSIT - P. van den Belt trading as _QSIT_ V.O.F., NL",1
+"Systematic-AS - Systematic Ltd, RU",1
+"RTMNETWORKS-AS - RTM Networks B.V., NL",1
+"Fabrika-Kukhnya-AS - Fabrika-Kukhnya Ltd., RU",1
+"DATACENTRUMGRONINGEN - Datacenter Groningen B.V., NL",1
+"CGI-Nederland-BV - CGl Nederland B.V., NL",1
+"SPECTRE - Spectre Operations B.V., NL",1
+"AXIT-AS - Axit Automatisering B.V., NL",1
+"CAPGE-HOSTING-MRO - CAPGEMINI AMERICA, INC., US",1
+"ANTHEIA - NSI (Holdings) Limited, GB",1
+"ZAYO-6461 - Zayo Bandwidth, US",1
+"glaslokaal - Stichting Glaslokaal, NL",1
+"iac-spb-as - ST. PETERSBURG STATE PUBLIC INSTITUTION _ST. PETERSBURG INFORMATION AND ANALYTICAL CENTER_, RU",1
+"isec-asn - ISECLAYER INC, MH",1
+"BASEIP-LAX - Base IP B.V., NL",1
+"nl-surfboard - Surfboard Holding BV, NL",1
+"formicidae-holdings - Formicidae Holdings B.V., NL",1
+"DIGI-RO - DIGI ROMANIA S.A., RO",1
+"SRVN-AS - Des Capital B.V., NL",1
+"Chernogolovka-AS - OOO _UK _Chernogolovka_, RU",1
+"IS-AS-1 - Interserver, Inc, US",1
+"setanta - Setanta Investments B.V., NL",1
+"BEEONE - BeeOne B.V., NL",1
+"CONSCIA-NL-202918 - Conscia Nederland B.V., NL",1
+"VAARTFIBER-AS - Stichting VaartFiber, NL",1
+"PRIVATE-NETWORKS - Private Networks Labs LLC, US",1
+"CLOUDEFENCE - Cloudefence B.V., NL",1
+"PEKITEL-AS - PEKITEL Ltd., RU",1
+"crossivity - Crossivity bv, NL",1
+"TWO-HIP - 2Hip Enterprises B.V., NL",1
+"YISP-AS - NovoServe B.V., NL",1
+"COLODEE-AS-AP - COLODEE DIGITAL NETWORK CO.,LTD., TH",1
+"triplon-as - Triplon BV, NL",1
+"BakkerSpees - Bakker & Spees BV, NL",1
+"ICTShift - Marco Tiggelaar trading as Key4ce, NL",1
+"USI-AS - USI-AS, NL",1
+"DEEPMEDIA-AS - Deep Media / V.A.J. Bruijnes (sole proprietorship), NL",1
+"FUGA_NL_1 - Cyso Group B.V., NL",1
+"KRGOVUA-AS - Executive Committee of the Kryvyi Rih City Council, UA",1
+"NewRadio-AS - LLC _Company New Radio_, RU",1
+"DIEDERIK-AS - Diederik Focko de Zee, NL",1
+"BroadbandEU - BroadbandNL B.V., NL",1
+"neveltech - Al-marhalla Al-taliya Information Technology Holding Company Ltd, SA",1
+"ASN-WERITECH - Weritech B.V., NL",1
+"DOMINOICT - Dustin NL B.V., NL",1
+"DIGITAL-REALTY-DE - Digital Frankfurt GmbH, DE",1
+"A-LINK - Alfa Link LLC, UA",1
+"as-istqservers - Istqrar for Servers Services Ltd, JO",1
+"Hybrid-AS - Hybrid LLC, RU",1
+"NextGenWebs-NL - NextGenWebs, S.L., ES",1
+"FAELIX - Faelix Limited, GB",1
+"IONOS-AS - IONOS SE, DE",1
+"MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",1
+"TEAMINTERNET-CA-AS - Team Internet AG, DE",1
+"INWX - InterNetworX Management GmbH, DE",1
+"AS11816 - SERVICIO DI TELECOMUNICACION DI ARUBA (SETAR) N.V., AW",1
+"TelServ - Bird B.V., NL",1
+"RTVNoord-AS - Stichting RTV Noord, NL",1
+"LAYER7-MITIGATION - Layer7 Technologies Inc, US",1
+"AS-DESEQUITY - Des Equity LLC, US",1
+"MIAC-AS - State Budgetary Health Care Institution of Arkhangelsk Region - Medical Information and Analytical Centre, RU",1
+"SmIT-AS - SMIT Ltd, RU",1
+"ASSPDChernega - SPD Chernega Aleksandr Anatolevich, UA",1
+"NebiusPA10 - Nebius B.V., NL",1
+"ACTIVEHOST-RU-AS - _ActiveHost RU_ LLC, RU",1
+"AS60880 - Horizon Telecom B.V., NL",1
+"SINOWORLDWIDE - SINO WORLDWIDE TRADING LIMITED, HK",1
+"PROXSYS-AS - PROXSYS B.V., NL",1
+"ROCO-HOST - ROCO HOST LTD, GB",1
+"FOURPLEX-ASN - Fourplex Telecom LLC, US",1
+"ISTQSERVERS-AS - Istqrar for Servers Services Ltd, JO",1
+"Lifestream-AS - Lifestream Ltd, RU",1
+"ASN-Greenet - Greenet Netwerk BV, NL",1
+"MJLO - MobielWerkt B.V., NL",1
+"Sdnbucks - SDNBUCKS BV, NL",1
+"IP-SECURITY - IP-SecurITy B.V., NL",1
+"BLS-HOSTING-AS - BLS media GmbH, DE",1
+"GM-AS - Gemeente Maastricht, NL",1
+"Cyberology-AS - Church of Cyberology, NL",1
+"G1-AS - G1 Entertainment LLC, RU",1
+"BASEFARM-ASN - Orange Business Digital Norway AS, NO",1
+"OTTCLUB-AS - INTERNET MEDIA STREAM LTD, GB",1
+"INFOR-AS30800 - Infor (Deutschland) GmbH, DE",1
+"ITS-PRO-AS - ITS PRO Ltd., RU",1
+"TRAVSYS-AS - Travsys BV, NL",1
+"Svyazenergo-AS - LLC _Svyazenergo_, RU",1
+"CWI-NL - CWI-NL, NL",1
+"ALTERNATIVA-NET - PE NIKOLAYENKO NIKOLAY IVANOVICH, UA",1
+"CoreISP - CoreISP Group Limited, GB",1
+"VIADATA-AS - CTNET ICT Infrastructuur B.V, NL",1
+"XS-ANYWHERE-AS - XS Anywhere B.V., NL",1
+"ZXfactory-AS - Capitar IT Group BV, NL",1
+"HACK-DV - Yannick Hack, DE",1
+"VIRTIX - SABRI-BERISHA, NL",1
+"AS-24X7ICT - 24x7 Hosting B.V., NL",1
+"CIRCLEB-ASN - Circle B B.V., NL",1
+"FiberTelecom-AS - Fiber Telecom Ltd, RU",1
+"GulfBridgeInternational - Gulf Bridge International Inc., VG",1
+"HYBRID-Poland - HYBRID ADTECH SP.Z.O.O., PL",1
+"GAGRATEL-AS - _Gagra Telecom_ LLC, RU",1
+"FIBRECAST - Fibrecast Ltd., GB",1
+"Itelma-AS - LLC NPP _Itelma_, RU",1
+"ERITAP-AS - Arend Brouwer, NL",1
+"Connect-AS - LLC _Connect_, RU",1
+"ASN-MGTS-USPD - PJSC Moscow city telephone network, RU",1
+"VOM - VOLYN OPTICAL NETWORKS LLC, UA",1
+"UNSPECIFIED - GKU _Mosgortelecom_, RU",1
+"AMS-IX1 - Amsterdam Internet Exchange B.V., NL",1
+"EISIT - Eis S.r.l., IT",1
+"netbase - NetBase BV, NL",1
+"EMANGO - Emango Internet Services B.V., NL",1
+"Fortytwo - Fortytwo Security BV, NL",1
+"CLOUDIE-AS-AP - Cloudie Limited, HK",1
+"Zorgring-AS - Stichting Zorgring Noord Holland Noord, NL",1
+"XSBYTE - NetGrid Holding B.V., NL",1
+"PUSIC-JURAJ-AS - Pusic Jurai, ES",1
+"vri - Gemeente Amsterdam, NL",1
+"CLEARSTACK - ClearStack B.V., NL",1
+"CallHosted-AS - Dstny Global Services NL B.V., NL",1
+"NETRACK-AS - Start2 LLC, RU",1
+"EquensWorldline - equensWorldline SE, NL",1
+"AS_ALLSYSTEMS - Allsystems B.V., NL",1
+"MUA0351 - Military unit A0351, UA",1
+"GRNCLOUD-AS - 42tech.solutions B.V., NL",1
+"FEMOIT - FEMO IT SOLUTIONS LIMITED, GB",1
+"IPONE - IP-ONE B.V., NL",1
+"BYTESNET-AS - Eurofiber Cloud Infra B.V., NL",1
+"Olymp-AS - JOINT-STOCK COMPANY _ZENTR_, RU",1
+"DOMINET-AS - _DOMINET_ LLC, UA",1
+"AirLink-AS - AirLink Ltd., RU",1
+"MOBITION-AS - Mobition BV, NL",1
+"Telecom-Uslugi-AS - LLC _Telecom-Uslugi_, RU",1
+"GOUDA - Gemeente Gouda, NL",1
+"BEZEQ-INTERNATIONAL-AS - Bezeq International Ltd., IL",1
+"BNG - Stichting Nederlands Instituut voor Beeld en Geluid, NL",1
+"Biocad_AS - Biocad JSC, RU",1
+"MTTM-AS - _Company _Urban telecommunications transport networks_ LLC, UA",1
+"Cyber-Telecom-AS - Cyber-Telecom LTD, RU",1
+"IPNG - IPng Networks GmbH, CH",1
+"JTC-AS8697 - Jordan Telecommunications PSC, JO",1
+"AARTSEN - Aartsen Breda B.V., NL",1
+"ICT-Teamwork-Continuity - ICT Teamwork Continuity Services B.V., NL",1
+"SEABONE-NET - TELECOM ITALIA SPARKLE S.p.A., IT",1
+"DEMENIN-AS - DEMENIN B.V., NL",1
+"nomobo - Nomobo B.V., NL",1
+"FLEXYZ - Flexyz B.V., NL",1
+"E-Moskva-AS - Joint Stock Company _Electronic Moscow_, RU",1
+"ARCUSIT-AS - Arcus IT Managed Services B.V., NL",1
+"BUSINESSCONNECT-BELGIUM - Today Concepts B.V., NL",1
+"PINKROCCADE - Pinkroccade HealthCare B.V., NL",1
+"HOST-AS-AP - Host Universal Pty Ltd, AU",1
+"EVERGREEN-AS - LLC GAAL-S, RU",1
+"IT-service-AS - IT-service LLC, RU",1
+"CCV - CCV Group B.V., NL",1
+"MOD-EU - Mod Mission Critical LLC, US",1
+"Renlife-AS - Renaissance Life Insurance Company Limited, RU",1
+"Atos-NL-AS - Eviden Netherlands B.V., NL",1
+"RELIANCEJIO-IN - Reliance Jio Infocomm Limited, IN",1
+"QUALCOMM - QUALCOMM (UK) LIMITED, GB",1
+"SCANIA-AS - Scania CV AB, SE",1
+"MOZOLUK-AS - FOP _Mozoluk Vladimir Arkadievich_, UA",1
+"ACC-ICT-PHC-D - ACC ICT B.V., NL",1
+"SCHUERLEINIT-AS - Jan Schuerlein trading as _Schuerlein IT_, DE",1
+"VK-EU-Telford - Viking Office Europe B.V., NL",1
+"AXUSHOST - AxusHost B.V., NL",1
+"SprintCDN - PE Brezhnev Daniil, UA",1
+"PROSAICLOUD - Quentin Dacquet, FR",1
+"LDCOMNET - Societe Francaise Du Radiotelephone - SFR SA, FR",1
+"SouthernHill - SouthernHill BV, NL",1
+"GALAKTIKA-AS - FOP Vitaly Podkhalyuzin Evgenyevich, UA",1
