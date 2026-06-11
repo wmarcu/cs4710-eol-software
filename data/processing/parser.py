@@ -1,3 +1,4 @@
+from enrich_versions import enrich_scanned_ips, enrich_counts_versions
 import pandas
 import copy
 import csv
@@ -197,9 +198,6 @@ org_counts = merged["org"].value_counts().reset_index()
 org_counts.columns = ["org", "count"]
 org_counts.to_csv("results/openssl/org_counts.csv", index=False)
 
-
-
-
 input_nginx = Path("results/nginx/scanned_ips.csv")
 output_versions_nginx = Path("results/nginx/counts_versions.csv")
 output_eol_nginx = Path("results/nginx/counts_eol.csv")
@@ -213,14 +211,11 @@ output_versions_openssl = Path("results/openssl/counts_versions.csv")
 output_eol_openssl= Path("results/openssl/counts_eol.csv")
 
 def count_versions_and_eol(input: Path, type: str, output_versions: Path, output_eol: Path):
-    if type == "nginx":
-        df = pandas.read_csv(input, header=None, names=["ip", "status_code", "server_header","version","eol_status"])
-    elif type == "mongodb":
-        df = pandas.read_csv(input, header=None, names=["ip", "module", "version", "eol_status"])
-    elif type == "openssl":
-        df = pandas.read_csv(input, header=None, names=["ip", "status_code", "server_header","version","eol_status"])
-    else:
+    df = pandas.read_csv(input)
+
+    if "version" not in df.columns or "eol_status" not in df.columns:
         return
+
     count_versions = dict()
     count_eol = dict()
     for value in df["version"].to_list():
@@ -235,12 +230,14 @@ def count_versions_and_eol(input: Path, type: str, output_versions: Path, output
             count_eol[value] = 1
     with open(output_versions, "w", newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
+        writer.writerow(["version", "count"])
         items = count_versions.items()
         items = sorted(items,key = lambda x: x[1], reverse = True)
         for key, value in items:
             writer.writerow([key, value])
     with open(output_eol, "w", newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
+        writer.writerow(["eol_status", "count"])
         items = count_eol.items()
         items = sorted(items,key = lambda x: x[1], reverse = True)
         for key, value in items:
@@ -256,12 +253,49 @@ count_versions_and_eol(input_nginx,"nginx",output_versions_nginx,output_eol_ngin
 count_versions_and_eol(input_mongodb,"mongodb",output_versions_mongodb,output_eol_mongodb)
 count_versions_and_eol(input_openssl,"openssl",output_versions_openssl,output_eol_openssl)
 
+enrich_scanned_ips(
+    Path("results/nginx/scanned_ips.csv"),
+    Path("results/nginx/scanned_ips_cves.csv"),
+    "nginx"
+)
+
+enrich_scanned_ips(
+    Path("results/mongodb/scanned_ips.csv"),
+    Path("results/mongodb/scanned_ips_cves.csv"),
+    "mongodb"
+)
+
+enrich_scanned_ips(
+    Path("results/openssl/scanned_ips.csv"),
+    Path("results/openssl/scanned_ips_cves.csv"),
+    "openssl"
+)
+
+enrich_counts_versions(
+    Path("results/nginx/counts_versions.csv"),
+    Path("results/nginx/counts_versions_cves.csv"),
+    "nginx"
+)
+
+enrich_counts_versions(
+    Path("results/mongodb/counts_versions.csv"),
+    Path("results/mongodb/counts_versions_cves.csv"),
+    "mongodb"
+)
+
+enrich_counts_versions(
+    Path("results/openssl/counts_versions.csv"),
+    Path("results/openssl/counts_versions_cves.csv"),
+    "openssl"
+)
+
 
 def graph_eol(input_path: Path, output_path: Path, software: str):
     software_dates = software + "_dates.pdf"
     software_status = software + "_status.pdf"
 
-    df = pd.read_csv(input_path, header=None, names=["EOL date", "number of hosts"])
+    df = pd.read_csv(input_path)
+    df.columns = ["EOL date", "number of hosts"]
     df_eol_dates = df[df["EOL date"] != "unknown"]
     df_eol_dates = df_eol_dates.sort_values("EOL date", ascending = False)
     plt.figure(figsize=(12, 6))
@@ -273,7 +307,7 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
     plt.tight_layout()
     plt.savefig(output_path / software_dates,format = "pdf")
 
-    df_eol_status = df
+    df_eol_status = df.copy()
     df_eol_status["EOL status"] = df["EOL date"].where(
         df["EOL date"].isin(["unknown", "not EOL"]),
         "EOL"
