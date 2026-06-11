@@ -1,3 +1,4 @@
+import argparse
 import pandas
 import copy
 import csv
@@ -40,12 +41,21 @@ def map_eol(first: bool, output: Path, eol_data: list, df: pandas.DataFrame,exis
             i += 1
     return existing
 
+parser = argparse.ArgumentParser()
 
-root1 = Path("../nginx-nl")
-root2 = Path("../grab-banners")
-output_nginx = Path("results/nginx/scanned_ips.csv")
-output_mongodb =  Path("results/mongodb/scanned_ips.csv")
-output_openssl =  Path("results/openssl/scanned_ips.csv")
+parser.add_argument("--input", default="../input")
+parser.add_argument("--output", default="results")
+
+args = parser.parse_args()
+
+
+root1 = Path(args.input)
+output_nginx = Path(f"{args.output}/nginx/scanned_ips.csv")
+output_mongodb =  Path(f"{args.output}/mongodb/scanned_ips.csv")
+output_openssl =  Path(f"{args.output}/openssl/scanned_ips.csv")
+output_nginx.parent.mkdir(parents=True, exist_ok=True)
+output_mongodb.parent.mkdir(parents=True, exist_ok=True)
+output_openssl.parent.mkdir(parents=True, exist_ok=True)
 open(output_nginx, "w").close()
 open(output_mongodb, "w").close()
 open(output_openssl, "w").close()
@@ -71,7 +81,7 @@ other_software = {}
 existing_nginx = set()
 existing_mongodb = set()
 existing_openssl = set()
-for csv_file in list(root1.rglob("*.csv")) + list(root2.rglob("*.csv")):
+for csv_file in list(root1.rglob("*.csv")):
     df = pandas.read_csv(csv_file)
     if df.columns.str.contains("nginx_version").any():
         df.columns = df.columns.str.replace("nginx_version", "version", regex=False)
@@ -161,59 +171,6 @@ def cymru_lookup(ip_list: list) -> pd.DataFrame:
             response += chunk
 
     return parse_result(response.decode())
-
-
-df = pd.read_csv(output_nginx)
-
-ip_list = df["ip"].dropna().tolist()
-df_result = cymru_lookup(ip_list)
-
-merged = df.merge(df_result, on="ip", how="left")
-merged.to_csv("results/nginx/scanned_ips_org.csv", index=False)
-
-org_counts = merged["org"].value_counts().reset_index()
-org_counts.columns = ["org", "count"]
-org_counts.to_csv("results/nginx/org_counts.csv", index=False)
-
-df = pd.read_csv(output_mongodb)
-
-ip_list = df["ip"].dropna().tolist()
-df_result = cymru_lookup(ip_list)
-
-merged = df.merge(df_result, on="ip", how="left")
-merged.to_csv("results/mongodb/scanned_ips_org.csv", index=False)
-
-org_counts = merged["org"].value_counts().reset_index()
-org_counts.columns = ["org", "count"]
-org_counts.to_csv("results/mongodb/org_counts.csv", index=False)
-
-df = pd.read_csv(output_openssl)
-
-ip_list = df["ip"].dropna().tolist()
-df_result = cymru_lookup(ip_list)
-
-merged = df.merge(df_result, on="ip", how="left")
-merged.to_csv("results/openssl/scanned_ips_org.csv", index=False)
-
-org_counts = merged["org"].value_counts().reset_index()
-org_counts.columns = ["org", "count"]
-org_counts.to_csv("results/openssl/org_counts.csv", index=False)
-
-
-
-
-input_nginx = output_nginx
-output_versions_nginx = Path("results/nginx/counts_versions.csv")
-output_eol_nginx = Path("results/nginx/counts_eol.csv")
-
-input_mongodb = output_mongodb
-output_versions_mongodb = Path("results/mongodb/counts_versions.csv")
-output_eol_mongodb= Path("results/mongodb/counts_eol.csv")
-
-input_openssl = output_openssl
-output_versions_openssl = Path("results/openssl/counts_versions.csv")
-output_eol_openssl= Path("results/openssl/counts_eol.csv")
-
 def count_versions_and_eol(input: Path, type: str, output_versions: Path, output_eol: Path):
     if type == "nginx":
         df = pandas.read_csv(input, header=None, names=["ip", "status_code", "server_header","version","eol_status"])
@@ -254,10 +211,6 @@ def count_versions_and_eol(input: Path, type: str, output_versions: Path, output
                 continue
             else:
                 writer.writerow([key, value])
-count_versions_and_eol(input_nginx,"nginx",output_versions_nginx,output_eol_nginx)
-count_versions_and_eol(input_mongodb,"mongodb",output_versions_mongodb,output_eol_mongodb)
-count_versions_and_eol(input_openssl,"openssl",output_versions_openssl,output_eol_openssl)
-
 
 def graph_eol(input_path: Path, output_path: Path, software: str):
     software_dates = software + "_dates.pdf"
@@ -293,13 +246,77 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
     plt.savefig(output_path / software_status, format="pdf")
     plt.close()
 
-input_nginx = Path("results/nginx/counts_eol.csv")
-input_mongodb = Path("results/mongodb/counts_eol.csv")
-input_openssl = Path("results/openssl/counts_eol.csv")
-output = Path("results/graphs")
-graph_eol(input_nginx, output, "nginx")
-graph_eol(input_mongodb, output, "mongodb")
-graph_eol(input_openssl,output,"OpenSSL")
+output_graphs = Path(f"{args.output}/graphs")
+output_graphs.mkdir(parents=True, exist_ok=True)
+
+
+if Path(output_nginx).exists() and Path(output_nginx).stat().st_size > 0:
+    df = pd.read_csv(output_nginx)
+    ip_list = df["ip"].dropna().tolist()
+    df_result = cymru_lookup(ip_list)
+
+    merged = df.merge(df_result, on="ip", how="left")
+    merged.to_csv(f"{args.output}/nginx/scanned_ips_org.csv", index=False)
+
+    org_counts = merged["org"].value_counts().reset_index()
+    org_counts.columns = ["org", "count"]
+    org_counts.to_csv(f"{args.output}/nginx/org_counts.csv", index=False)
+
+    input_nginx = output_nginx
+    output_versions_nginx = Path(f"{args.output}/nginx/counts_versions.csv")
+    output_eol_nginx = Path(f"{args.output}/nginx/counts_eol.csv")
+
+    count_versions_and_eol(input_nginx, "nginx", output_versions_nginx, output_eol_nginx)
+
+    input_nginx = Path(f"{args.output}/nginx/counts_eol.csv")
+
+    graph_eol(input_nginx, output_graphs, "nginx")
+
+
+if Path(output_mongodb).exists() and Path(output_mongodb).stat().st_size > 0:
+    df = pd.read_csv(output_mongodb)
+    ip_list = df["ip"].dropna().tolist()
+    df_result = cymru_lookup(ip_list)
+
+    merged = df.merge(df_result, on="ip", how="left")
+    merged.to_csv(f"{args.output}/mongodb/scanned_ips_org.csv", index=False)
+
+    org_counts = merged["org"].value_counts().reset_index()
+    org_counts.columns = ["org", "count"]
+    org_counts.to_csv(f"{args.output}/mongodb/org_counts.csv", index=False)
+
+    input_mongodb = output_mongodb
+    output_versions_mongodb = Path(f"{args.output}/mongodb/counts_versions.csv")
+    output_eol_mongodb = Path(f"{args.output}/mongodb/counts_eol.csv")
+
+    count_versions_and_eol(input_mongodb, "mongodb", output_versions_mongodb, output_eol_mongodb)
+
+    input_mongodb = Path(f"{args.output}/mongodb/counts_eol.csv")
+
+    graph_eol(input_mongodb, output_graphs, "mongodb")
+
+if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
+    df = pd.read_csv(output_openssl)
+    ip_list = df["ip"].dropna().tolist()
+    df_result = cymru_lookup(ip_list)
+
+    merged = df.merge(df_result, on="ip", how="left")
+    merged.to_csv(f"{args.output}/openssl/scanned_ips_org.csv", index=False)
+
+    org_counts = merged["org"].value_counts().reset_index()
+    org_counts.columns = ["org", "count"]
+    org_counts.to_csv(f"{args.output}/openssl/org_counts.csv", index=False)
+    input_openssl = output_openssl
+    output_versions_openssl = Path(f"{args.output}/openssl/counts_versions.csv")
+    output_eol_openssl = Path(f"{args.output}/openssl/counts_eol.csv")
+    count_versions_and_eol(input_openssl, "openssl", output_versions_openssl, output_eol_openssl)
+    input_openssl = Path(f"{args.output}/openssl/counts_eol.csv")
+    graph_eol(input_openssl,output_graphs,"OpenSSL")
+
+
+
+
+
 
 
 other_software_sorted = sorted(other_software.items(), key=lambda x: x[1], reverse=True)
@@ -317,4 +334,6 @@ plt.pie(
     autopct="%1.1f%%"
 )
 plt.axis("equal")
-plt.savefig("results/graphs/other_software_distribution.pdf", format="pdf")
+output_other = Path(f"{args.output}/graphs/other_software_distribution.pdf")
+output_other.parent.mkdir(parents=True, exist_ok=True)
+plt.savefig(output_other, format="pdf")
