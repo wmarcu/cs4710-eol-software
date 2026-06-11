@@ -244,7 +244,8 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
     software_dates = software + "_dates.pdf"
     software_status = software + "_status.pdf"
 
-    df = pd.read_csv(input_path, header=None, names=["EOL date", "number of hosts"])
+    df = pd.read_csv(input_path)
+    df.columns = ["EOL date", "number of hosts"]
     df_eol_dates = df[df["EOL date"] != "unknown"]
     df_eol_dates = df_eol_dates.sort_values("EOL date", ascending = False)
 
@@ -296,6 +297,18 @@ if Path(output_nginx).exists() and Path(output_nginx).stat().st_size > 0:
 
     count_versions_and_eol(input_nginx, "nginx", output_versions_nginx, output_eol_nginx)
 
+    enrich_scanned_ips(
+        Path(f"{args.output}/nginx/scanned_ips.csv"),
+        Path(f"{args.output}/nginx/scanned_ips_cves.csv"),
+        "nginx"
+    )
+
+    enrich_counts_versions(
+        Path(f"{args.output}/nginx/counts_versions.csv"),
+        Path(f"{args.output}/nginx/counts_versions_cves.csv"),
+        "nginx"
+    )
+
     input_nginx = Path(f"{args.output}/nginx/counts_eol.csv")
 
     graph_eol(input_nginx, output_graphs, "nginx")
@@ -319,6 +332,18 @@ if Path(output_mongodb).exists() and Path(output_mongodb).stat().st_size > 0:
 
     count_versions_and_eol(input_mongodb, "mongodb", output_versions_mongodb, output_eol_mongodb)
 
+    enrich_scanned_ips(
+        Path(f"{args.output}/mongodb/scanned_ips.csv"),
+        Path(f"{args.output}/mongodb/scanned_ips_cves.csv"),
+        "mongodb"
+    )
+
+    enrich_counts_versions(
+        Path(f"{args.output}/mongodb/counts_versions.csv"),
+        Path(f"{args.output}/mongodb/counts_versions_cves.csv"),
+        "mongodb"
+    )
+
     input_mongodb = Path(f"{args.output}/mongodb/counts_eol.csv")
 
     graph_eol(input_mongodb, output_graphs, "mongodb")
@@ -341,52 +366,22 @@ if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
 
     count_versions_and_eol(input_openssl, "openssl", output_versions_openssl, output_eol_openssl)
 
+    enrich_scanned_ips(
+        Path(f"{args.output}/openssl/scanned_ips.csv"),
+        Path(f"{args.output}/openssl/scanned_ips_cves.csv"),
+        "openssl"
+    )
+
+    enrich_counts_versions(
+        Path(f"{args.output}/openssl/counts_versions.csv"),
+        Path(f"{args.output}/openssl/counts_versions_cves.csv"),
+        "openssl"
+    )
+
     input_openssl = Path(f"{args.output}/openssl/counts_eol.csv")
 
     graph_eol(input_openssl,output_graphs,"OpenSSL")
 
-
-
-
-count_versions_and_eol(input_nginx,"nginx",output_versions_nginx,output_eol_nginx)
-count_versions_and_eol(input_mongodb,"mongodb",output_versions_mongodb,output_eol_mongodb)
-count_versions_and_eol(input_openssl,"openssl",output_versions_openssl,output_eol_openssl)
-
-enrich_scanned_ips(
-    Path(f"{args.output}/nginx/scanned_ips.csv"),
-    Path(f"{args.output}/nginx/scanned_ips_cves.csv"),
-    "nginx"
-)
-
-enrich_scanned_ips(
-    Path(f"{args.output}/mongodb/scanned_ips.csv"),
-    Path(f"{args.output}/mongodb/scanned_ips_cves.csv"),
-    "mongodb"
-)
-
-enrich_scanned_ips(
-    Path(f"{args.output}/openssl/scanned_ips.csv"),
-    Path(f"{args.output}/openssl/scanned_ips_cves.csv"),
-    "openssl"
-)
-
-enrich_counts_versions(
-    Path(f"{args.output}/nginx/counts_versions.csv"),
-    Path(f"{args.output}/nginx/counts_versions_cves.csv"),
-    "nginx"
-)
-
-enrich_counts_versions(
-    Path(f"{args.output}/mongodb/counts_versions.csv"),
-    Path(f"{args.output}/mongodb/counts_versions_cves.csv"),
-    "mongodb"
-)
-
-enrich_counts_versions(
-    Path(f"{args.output}/openssl/counts_versions.csv"),
-    Path(f"{args.output}/openssl/counts_versions_cves.csv"),
-    "openssl"
-)
 
 
 # makes a small popularity graph for any other software processed during the scan

@@ -3274,6 +3274,9 @@ ip,status_code,server_header,version,eol_status,,
 45.135.99.47,200,Apache/2.4.58 (Unix) OpenSSL/1.1.1n PHP/8.2.8,1.1.1n,2023-09-11,210489,"Beyond_ASN - Beyond Relationship Marketing GmbH, DE"
 45.136.67.203,200,Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.8,1.1.1w,2023-09-11,210489,"Beyond_ASN - Beyond Relationship Marketing GmbH, DE"
 ip,status_code,server_header,version,eol_status,,
+185.104.28.238,200,Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.0.30,1.0.2k-fips,2019-12-31,206281,"AS-ZXCS - Stichting DIGI NL, NL"
+185.182.56.12,200,Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16,1.0.2k-fips,2019-12-31,48635,"CLDIN-NL - Your Hosting B.V., NL"
+ip,status_code,server_header,version,eol_status,,
 141.98.17.141,404,Apache/2.4.37 (AlmaLinux) OpenSSL/1.1.1k,1.1.1k,2023-09-11,56309,"SIAMDATA-TH - Siamdata Communication Co.,Ltd., TH"
 45.136.64.155,200,Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.8,1.1.1w,2023-09-11,210489,"Beyond_ASN - Beyond Relationship Marketing GmbH, DE"
 46.161.211.145,200,Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.8,1.1.1w,2023-09-11,210489,"Beyond_ASN - Beyond Relationship Marketing GmbH, DE"
