@@ -1,4 +1,6 @@
+
 import argparse
+from enrich_versions import enrich_scanned_ips, enrich_counts_versions
 import pandas
 import copy
 import csv
@@ -198,14 +200,11 @@ def cymru_lookup(ip_list: list) -> pd.DataFrame:
 
 # takes in the output from the initial for loop and groups entries by EoL date and version
 def count_versions_and_eol(input: Path, type: str, output_versions: Path, output_eol: Path):
-    if type == "nginx":
-        df = pandas.read_csv(input, header=None, names=["ip", "status_code", "server_header","version","eol_status"])
-    elif type == "mongodb":
-        df = pandas.read_csv(input, header=None, names=["ip", "module", "version", "eol_status"])
-    elif type == "openssl":
-        df = pandas.read_csv(input, header=None, names=["ip", "status_code", "server_header","version","eol_status"])
-    else:
+    df = pandas.read_csv(input)
+
+    if "version" not in df.columns or "eol_status" not in df.columns:
         return
+
     count_versions = dict()
     count_eol = dict()
     for value in df["version"].to_list():
@@ -220,12 +219,14 @@ def count_versions_and_eol(input: Path, type: str, output_versions: Path, output
             count_eol[value] = 1
     with open(output_versions, "w", newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
+        writer.writerow(["version", "count"])
         items = count_versions.items()
         items = sorted(items,key = lambda x: x[1], reverse = True)
         for key, value in items:
             writer.writerow([key, value])
     with open(output_eol, "w", newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
+        writer.writerow(["eol_status", "count"])
         items = count_eol.items()
         items = sorted(items,key = lambda x: x[1], reverse = True)
         for key, value in items:
@@ -244,20 +245,19 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
     software_status = software + "_status.pdf"
 
     df = pd.read_csv(input_path, header=None, names=["EOL date", "number of hosts"])
-
     df_eol_dates = df[df["EOL date"] != "unknown"]
     df_eol_dates = df_eol_dates.sort_values("EOL date", ascending = False)
 
     plt.figure(figsize=(12, 6))
     plt.bar(df_eol_dates["EOL date"], df_eol_dates["number of hosts"], color = "red")
-    plt.title("EOL dates for " + software + " hosts")
-    plt.xlabel("EOL date")
-    plt.ylabel("number of hosts")
-    plt.xticks(rotation=45)
+    plt.xlabel("EOL date",fontsize=20)
+    plt.ylabel("number of hosts",fontsize=20)
+    plt.xticks(rotation=45,ha='right',fontsize=20)
+    plt.yticks(fontsize=20)
     plt.tight_layout()
     plt.savefig(output_path / software_dates,format = "pdf")
 
-    df_eol_status = df
+    df_eol_status = df.copy()
     df_eol_status["EOL status"] = df["EOL date"].where(
         df["EOL date"].isin(["unknown", "not EOL"]),
         "EOL"
@@ -271,7 +271,6 @@ def graph_eol(input_path: Path, output_path: Path, software: str):
         autopct="%1.1f%%"
     )
 
-    plt.title("Percentage of hosts operating on EOL " + software)
     plt.savefig(output_path / software_status, format="pdf")
     plt.close()
 
@@ -349,6 +348,45 @@ if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
 
 
 
+count_versions_and_eol(input_nginx,"nginx",output_versions_nginx,output_eol_nginx)
+count_versions_and_eol(input_mongodb,"mongodb",output_versions_mongodb,output_eol_mongodb)
+count_versions_and_eol(input_openssl,"openssl",output_versions_openssl,output_eol_openssl)
+
+enrich_scanned_ips(
+    Path(f"{args.output}/nginx/scanned_ips.csv"),
+    Path(f"{args.output}/nginx/scanned_ips_cves.csv"),
+    "nginx"
+)
+
+enrich_scanned_ips(
+    Path(f"{args.output}/mongodb/scanned_ips.csv"),
+    Path(f"{args.output}/mongodb/scanned_ips_cves.csv"),
+    "mongodb"
+)
+
+enrich_scanned_ips(
+    Path(f"{args.output}/openssl/scanned_ips.csv"),
+    Path(f"{args.output}/openssl/scanned_ips_cves.csv"),
+    "openssl"
+)
+
+enrich_counts_versions(
+    Path(f"{args.output}/nginx/counts_versions.csv"),
+    Path(f"{args.output}/nginx/counts_versions_cves.csv"),
+    "nginx"
+)
+
+enrich_counts_versions(
+    Path(f"{args.output}/mongodb/counts_versions.csv"),
+    Path(f"{args.output}/mongodb/counts_versions_cves.csv"),
+    "mongodb"
+)
+
+enrich_counts_versions(
+    Path(f"{args.output}/openssl/counts_versions.csv"),
+    Path(f"{args.output}/openssl/counts_versions_cves.csv"),
+    "openssl"
+)
 
 
 # makes a small popularity graph for any other software processed during the scan
