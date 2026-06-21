@@ -239,6 +239,36 @@ def count_versions_and_eol(input: Path, type: str, output_versions: Path, output
             else:
                 writer.writerow([key, value])
 
+def graph_top_cves(input_path: Path, output_path: Path, software: str):
+    df = pd.read_csv(input_path)
+
+    counts = {}
+
+    for value in df["cves"]:
+        if pd.isna(value) or value == "none":
+            continue
+
+        for cve in str(value).split(";"):
+            cve = cve.strip()
+            counts[cve] = counts.get(cve, 0) + 1
+
+    if not counts:
+        return
+
+    cves = pd.DataFrame(
+        sorted(counts.items(), key=lambda x: x[1], reverse=True),
+        columns=["cve", "hosts"]
+    )
+
+    plt.figure(figsize=(10, 5))
+    plt.bar(cves["cve"], cves["hosts"])
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+    plt.xlabel("CVE")
+    plt.ylabel("Number of hosts")
+    plt.savefig(output_path / f"{software}_top_cves.pdf", format="pdf")
+    plt.close()
+
 # graphs the EoL data for each of the types of software and puts it in a separate folder
 def graph_eol(input_path: Path, output_path: Path, software: str):
     software_dates = software + "_dates.pdf"
@@ -309,6 +339,12 @@ if Path(output_nginx).exists() and Path(output_nginx).stat().st_size > 0:
         "nginx"
     )
 
+    graph_top_cves(
+        Path(f"{args.output}/nginx/scanned_ips_cves.csv"),
+        output_graphs,
+        "nginx"
+    )
+
     input_nginx = Path(f"{args.output}/nginx/counts_eol.csv")
 
     graph_eol(input_nginx, output_graphs, "nginx")
@@ -344,6 +380,12 @@ if Path(output_mongodb).exists() and Path(output_mongodb).stat().st_size > 0:
         "mongodb"
     )
 
+    graph_top_cves(
+        Path(f"{args.output}/mongodb/scanned_ips_cves.csv"),
+        output_graphs,
+        "mongodb"
+    )
+
     input_mongodb = Path(f"{args.output}/mongodb/counts_eol.csv")
 
     graph_eol(input_mongodb, output_graphs, "mongodb")
@@ -375,6 +417,12 @@ if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
     enrich_counts_versions(
         Path(f"{args.output}/openssl/counts_versions.csv"),
         Path(f"{args.output}/openssl/counts_versions_cves.csv"),
+        "openssl"
+    )
+
+    graph_top_cves(
+        Path(f"{args.output}/openssl/scanned_ips_cves.csv"),
+        output_graphs,
         "openssl"
     )
 
