@@ -32,6 +32,9 @@ def check_version(version, cve_versions, cve_ranges):
         end_inc = parse_version(r.get("version_end_including"))
         end_exc = parse_version(r.get("version_end_excluding"))
 
+        if all(not v for v in [start_inc, start_exc, end_inc,  end_exc]):
+            continue
+
         if start_inc and version < start_inc:
             continue
         if start_exc and version <= start_exc:
