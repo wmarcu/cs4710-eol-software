@@ -239,61 +239,55 @@ def count_versions_and_eol(input: Path, type: str, output_versions: Path, output
             else:
                 writer.writerow([key, value])
 
-def graph_host_severity_distribution(input_path: Path, output_path: Path, software: str):
-    df = pd.read_csv(input_path)
+def table_host_severity_distribution(input_paths: dict[str, Path], output_path: Path):
+    severity_order = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+    rows = []
 
-    df = df.dropna(subset=["ip", "base_score"])
-    df["base_score"] = pd.to_numeric(df["base_score"], errors="coerce")
-    df = df.dropna(subset=["base_score"])
+    for software, input_path in input_paths.items():
+        df = pd.read_csv(input_path)
 
-    if df.empty:
-        return
+        df = df.dropna(subset=["ip", "base_score", "base_severity"])
+        df["base_score"] = pd.to_numeric(df["base_score"], errors="coerce")
+        df = df.dropna(subset=["base_score"])
 
-    host_scores = (
-        df.groupby("ip")["base_score"]
-        .max()
-        .reset_index(name="max_base_score")
-    )
+        if df.empty:
+            continue
 
-    def score_to_severity(score):
-        if score >= 9.0:
-            return "Critical"
-        elif score >= 7.0:
-            return "High"
-        elif score >= 4.0:
-            return "Medium"
-        elif score > 0.0:
-            return "Low"
-        else:
-            return "None"
+        idx = df.groupby("ip")["base_score"].idxmax()
+        host_max = df.loc[idx].copy()
 
-    host_scores["severity"] = host_scores["max_base_score"].apply(score_to_severity)
+        host_max["base_severity"] = (
+            host_max["base_severity"]
+            .astype(str)
+            .str.upper()
+        )
 
-    severity_order = ["Low", "Medium", "High", "Critical"]
+        counts = (
+            host_max["base_severity"]
+            .value_counts()
+            .reindex(severity_order, fill_value=0)
+        )
 
-    counts = (
-        host_scores["severity"]
-        .value_counts()
-        .reindex(severity_order, fill_value=0)
-        .reset_index()
-    )
+        total = counts.sum()
 
-    counts.columns = ["severity", "hosts"]
-    counts["percentage"] = counts["hosts"] / counts["hosts"].sum() * 100
+        row = {
+            "software": software,
+            "total_hosts_with_cve": total,
+         }
 
-    plt.figure(figsize=(8, 5))
-    plt.bar(counts["severity"], counts["percentage"])
+        for severity in severity_order:
+            count = int(counts[severity])
+            percentage = (count / total * 100) if total > 0 else 0
 
-    plt.xlabel("Maximum CVSS severity per host", fontsize=20)
-    plt.ylabel("Percentage of hosts", fontsize=20)
-    plt.xticks(fontsize=18)
-    plt.yticks(fontsize=18)
+            row[f"{severity.lower()}_hosts"] = count
+            row[f"{severity.lower()}_percentage"] = round(percentage, 1)
 
-    plt.tight_layout()
+        rows.append(row)
 
-    plt.savefig(output_path / f"{software}_severity_distribution.pdf", format="pdf")
+    result = pd.DataFrame(rows)
+    result.to_csv(output_path / "host_severity_distribution.csv", index=False)
 
-    plt.close()
+    return result
 
 # graphs the EoL data for each of the types of software and puts it in a separate folder
 def graph_eol(input_path: Path, output_path: Path, software: str):
@@ -365,7 +359,7 @@ if Path(output_nginx).exists() and Path(output_nginx).stat().st_size > 0:
         "nginx"
     )
 
-    graph_host_severity_distribution(Path(f"{args.output}/nginx/ip_cve.csv"), output_graphs, "nginx")
+    #graph_host_severity_distribution(Path(f"{args.output}/nginx/ip_cve.csv"), output_graphs, "nginx")
 
     input_nginx = Path(f"{args.output}/nginx/counts_eol.csv")
 
@@ -401,7 +395,7 @@ if Path(output_mongodb).exists() and Path(output_mongodb).stat().st_size > 0:
         "mongodb"
     )
 
-    graph_host_severity_distribution(Path(f"{args.output}/mongodb/ip_cve.csv"), output_graphs, "mongodb")
+    #graph_host_severity_distribution(Path(f"{args.output}/mongodb/ip_cve.csv"), output_graphs, "mongodb")
 
     input_mongodb = Path(f"{args.output}/mongodb/counts_eol.csv")
 
@@ -437,13 +431,20 @@ if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
         "openssl"
     )
 
-    graph_host_severity_distribution(Path(f"{args.output}/openssl/ip_cve.csv"), output_graphs, "openssl")
+    #graph_host_severity_distribution(Path(f"{args.output}/openssl/ip_cve.csv"), output_graphs, "openssl")
 
     input_openssl = Path(f"{args.output}/openssl/counts_eol.csv")
 
     graph_eol(input_openssl,output_graphs,"OpenSSL")
 
-
+table_host_severity_distribution(
+    {
+        "nginx": Path(f"{args.output}/nginx/ip_cve.csv"),
+        "MongoDB": Path(f"{args.output}/mongodb/ip_cve.csv"),
+        "OpenSSL": Path(f"{args.output}/openssl/ip_cve.csv"),
+    },
+    Path(args.output)
+)
 
 # makes a small popularity graph for any other software processed during the scan
 other_software_sorted = sorted(other_software.items(), key=lambda x: x[1], reverse=True)
