@@ -1,0 +1,87 @@
+import json
+import re
+import argparse
+
+CPE_RE = {
+    "nginx" : r'cpe:2\.3:a:[^:]+:nginx:',
+    "mongodb" : r'cpe:2\.3:a:[^:]+:mongodb:',
+    "openssl" : r'cpe:2\.3:a:[^:]+:openssl:'
+}
+
+DEFAULT_CVE_DIR = "data/processing/results/CVE"
+
+def parse_cpe_match(cpe_match : dict, criteria):
+    parts = criteria.split(":")
+    version = parts[5] if len(parts) > 5 and parts[5] != "*" else None
+
+    has_range = any(k in cpe_match for k in (
+        "versionStartIncluding", "versionStartExcluding",
+        "versionEndIncluding", "versionEndExcluding"
+    ))
+
+    if has_range:
+        return version, {
+            "version_start_including": cpe_match.get("versionStartIncluding"),
+            "version_start_excluding": cpe_match.get("versionStartExcluding"),
+            "version_end_including": cpe_match.get("versionEndIncluding"),
+            "version_end_excluding": cpe_match.get("versionEndExcluding"),
+        }
+    
+    return version, {}
+
+def get_severity(metrics):
+    for key, version_label in [
+        ("cvssMetricV40", "4.0"),
+        ("cvssMetricV31", "3.1"),
+        ("cvssMetricV30", "3.0"),
+        ("cvssMetricV2", "2.0"),
+    ]:
+        entries = metrics.get(key)
+        if not entries:
+            continue
+        primary = next((e for e in entries if e.get("type") == "Primary"), entries[0])
+        cvss_data = primary.get("cvssData", {})
+        return cvss_data.get("baseScore"), version_label, cvss_data.get("baseSeverity")
+    return None, None, None
+
+def parse_cve(software_name, cve_dir):
+    cves_in = []
+    with open(cve_dir + "/" + software_name + ".jsonl") as f:
+        for line in f:
+            cves_in.append(json.loads(line)["cve"])
+
+    cve_ranges = {}
+    for e in cves_in:
+        id = e["id"]
+        versions = []
+        ranges = []
+        for config in e.get("configurations", []):
+            for cpe_match in config.get("nodes", [{}])[0].get("cpeMatch", []):
+                criteria = cpe_match.get("criteria", "")
+                if re.compile(CPE_RE[software_name]).match(criteria) and cpe_match.get("vulnerable", False):
+                    version, range = parse_cpe_match(cpe_match, criteria)
+                    if version: versions.append(version) 
+                    if range: ranges.append(range)
+
+        severity = get_severity(e.get("metrics", []))
+
+        cve_ranges[id] = (versions, ranges, severity)
+
+    return cve_ranges
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Parse CVE API output to get version numbers and ranges, and severity")
+    parser.add_argument("-i", "--input_dir", help="Folder containing the output of cve_api.py")
+
+    args = parser.parse_args()
+
+    CVE_DIR = args.input_dir if args.input_dir else DEFAULT_CVE_DIR
+
+    for software in CPE_RE.keys():
+        try:
+            with open(CVE_DIR + f"/parsed_{software}.json", "w") as f:
+                r = parse_cve(software, CVE_DIR)
+                json.dump(r, f)
+        except FileNotFoundError:
+            print(CVE_DIR + f"/parsed_{software}.json not found. Skipping")
+            pass
