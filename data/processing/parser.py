@@ -239,34 +239,60 @@ def count_versions_and_eol(input: Path, type: str, output_versions: Path, output
             else:
                 writer.writerow([key, value])
 
-def graph_top_cves(input_path: Path, output_path: Path, software: str):
+def graph_host_severity_distribution(input_path: Path, output_path: Path, software: str):
     df = pd.read_csv(input_path)
 
-    counts = {}
+    df = df.dropna(subset=["ip", "base_score"])
+    df["base_score"] = pd.to_numeric(df["base_score"], errors="coerce")
+    df = df.dropna(subset=["base_score"])
 
-    for value in df["cves"]:
-        if pd.isna(value) or value == "none":
-            continue
-
-        for cve in str(value).split(";"):
-            cve = cve.strip()
-            counts[cve] = counts.get(cve, 0) + 1
-
-    if not counts:
+    if df.empty:
         return
 
-    cves = pd.DataFrame(
-        sorted(counts.items(), key=lambda x: x[1], reverse=True),
-        columns=["cve", "hosts"]
+    host_scores = (
+        df.groupby("ip")["base_score"]
+        .max()
+        .reset_index(name="max_base_score")
     )
 
-    plt.figure(figsize=(10, 5))
-    plt.bar(cves["cve"], cves["hosts"])
-    plt.xticks(rotation=45, ha="right")
+    def score_to_severity(score):
+        if score >= 9.0:
+            return "Critical"
+        elif score >= 7.0:
+            return "High"
+        elif score >= 4.0:
+            return "Medium"
+        elif score > 0.0:
+            return "Low"
+        else:
+            return "None"
+
+    host_scores["severity"] = host_scores["max_base_score"].apply(score_to_severity)
+
+    severity_order = ["Low", "Medium", "High", "Critical"]
+
+    counts = (
+        host_scores["severity"]
+        .value_counts()
+        .reindex(severity_order, fill_value=0)
+        .reset_index()
+    )
+
+    counts.columns = ["severity", "hosts"]
+    counts["percentage"] = counts["hosts"] / counts["hosts"].sum() * 100
+
+    plt.figure(figsize=(8, 5))
+    plt.bar(counts["severity"], counts["percentage"])
+
+    plt.xlabel("Maximum CVSS severity per host", fontsize=20)
+    plt.ylabel("Percentage of hosts", fontsize=20)
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
+
     plt.tight_layout()
-    plt.xlabel("CVE")
-    plt.ylabel("Number of hosts")
-    plt.savefig(output_path / f"{software}_top_cves.pdf", format="pdf")
+
+    plt.savefig(output_path / f"{software}_severity_distribution.pdf", format="pdf")
+
     plt.close()
 
 # graphs the EoL data for each of the types of software and puts it in a separate folder
@@ -339,16 +365,11 @@ if Path(output_nginx).exists() and Path(output_nginx).stat().st_size > 0:
         "nginx"
     )
 
-    graph_top_cves(
-        Path(f"{args.output}/nginx/scanned_ips_cves.csv"),
-        output_graphs,
-        "nginx"
-    )
+    graph_host_severity_distribution(Path(f"{args.output}/nginx/ip_cve.csv"), output_graphs, "nginx")
 
     input_nginx = Path(f"{args.output}/nginx/counts_eol.csv")
 
     graph_eol(input_nginx, output_graphs, "nginx")
-
 
 if Path(output_mongodb).exists() and Path(output_mongodb).stat().st_size > 0:
     df = pd.read_csv(output_mongodb)
@@ -380,11 +401,7 @@ if Path(output_mongodb).exists() and Path(output_mongodb).stat().st_size > 0:
         "mongodb"
     )
 
-    graph_top_cves(
-        Path(f"{args.output}/mongodb/scanned_ips_cves.csv"),
-        output_graphs,
-        "mongodb"
-    )
+    graph_host_severity_distribution(Path(f"{args.output}/mongodb/ip_cve.csv"), output_graphs, "mongodb")
 
     input_mongodb = Path(f"{args.output}/mongodb/counts_eol.csv")
 
@@ -420,11 +437,7 @@ if Path(output_openssl).exists() and Path(output_openssl).stat().st_size > 0:
         "openssl"
     )
 
-    graph_top_cves(
-        Path(f"{args.output}/openssl/scanned_ips_cves.csv"),
-        output_graphs,
-        "openssl"
-    )
+    graph_host_severity_distribution(Path(f"{args.output}/openssl/ip_cve.csv"), output_graphs, "openssl")
 
     input_openssl = Path(f"{args.output}/openssl/counts_eol.csv")
 
