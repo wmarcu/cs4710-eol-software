@@ -17,7 +17,6 @@ def count_versions_and_eol(scanned_ips_filepath:str, output_versions: str, outpu
     version_counts = df["version"].value_counts()
     eol_counts = df["eol_status"].fillna("unknown").replace("False", "not EOL").value_counts(dropna=False)
 
-
     version_counts.to_csv(output_versions)
     eol_counts.to_csv(output_eol)
 
@@ -42,6 +41,8 @@ def table_host_severity_distribution(ip_cve_filepath):
     severity_order = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
 
     ip_cve_df = pd.read_csv(ip_cve_filepath).dropna(subset=["ip", "base_score", "base_severity"])
+    ip_cve_df = ip_cve_df[ip_cve_df["eol_status"] != "False"]
+
 
     ip_cve_df["base_score"] = pd.to_numeric(ip_cve_df["base_score"], errors="coerce")
     ip_cve_df = ip_cve_df.dropna(subset=["base_score"])

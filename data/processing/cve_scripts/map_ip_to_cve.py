@@ -16,7 +16,7 @@ if __name__ == "__main__":
     for software_name in SOFTWARE:
         print(software_name)
         try:
-            ip_version_df = pd.read_csv(f"{RESULTS_FOLDER}/{software_name}/scanned_ips.csv", usecols=["ip","version"])
+            ip_version_df = pd.read_csv(f"{RESULTS_FOLDER}/{software_name}/scanned_ips.csv", usecols=["ip","version","eol_status"])
             version_cve_df = pd.read_csv(f"{RESULTS_FOLDER}/{software_name}/version_cve.csv")
         except pd.errors.EmptyDataError:
             # File is empty because no ips or CVEs were found for that software.
