@@ -289,6 +289,61 @@ def table_host_severity_distribution(input_paths: dict[str, Path], output_path: 
 
     return result
 
+def table_top_cves(input_paths: dict[str, Path], output_path: Path, top_n: int = 10):
+    rows = []
+
+    for software, input_path in input_paths.items():
+        df = pd.read_csv(input_path)
+
+        df = df[df["ip"] != "ip"]
+        df = df[df["version"] != "version"]
+
+        df = df.dropna(subset=["ip", "cve_id"])
+        df = df[df["cve_id"].astype(str).str.startswith("CVE-")]
+
+        df["base_score"] = pd.to_numeric(df["base_score"], errors="coerce")
+        df["base_severity"] = df["base_severity"].astype(str).str.upper()
+
+        if df.empty:
+            continue
+
+        counts = (
+            df.groupby("cve_id")
+            .agg(
+                affected_hosts=("ip", "nunique"),
+                affected_versions=("version", lambda x: ", ".join(sorted(set(x.astype(str)))[:5])),
+                max_base_score=("base_score", "max")
+            )
+            .reset_index()
+        )
+
+        severity_meta = (
+            df.sort_values("base_score", ascending=False)
+            .drop_duplicates("cve_id")[["cve_id", "base_severity", "cvss_version"]]
+        )
+
+        counts = counts.merge(severity_meta, on="cve_id", how="left")
+
+        counts = counts.sort_values(
+            ["affected_hosts", "max_base_score"],
+            ascending=[False, False]
+        ).head(top_n)
+
+        counts.insert(0, "software", software)
+        counts.insert(1, "rank", range(1, len(counts) + 1))
+
+        rows.append(counts)
+
+        counts.to_csv(output_path / f"{software.lower()}_top_cves.csv", index=False)
+
+    if rows:
+        result = pd.concat(rows, ignore_index=True)
+    else:
+        result = pd.DataFrame()
+
+    result.to_csv(output_path / "top_cves.csv", index=False)
+    return result
+
 # graphs the EoL data for each of the types of software and puts it in a separate folder
 def graph_eol(input_path: Path, output_path: Path, software: str):
     software_dates = software + "_dates.pdf"
@@ -444,6 +499,16 @@ table_host_severity_distribution(
         "OpenSSL": Path(f"{args.output}/openssl/ip_cve.csv"),
     },
     Path(args.output)
+)
+
+table_top_cves(
+    {
+        "nginx": Path(f"{args.output}/nginx/ip_cve.csv"),
+        "MongoDB": Path(f"{args.output}/mongodb/ip_cve.csv"),
+        "OpenSSL": Path(f"{args.output}/openssl/ip_cve.csv"),
+    },
+    Path(args.output),
+    top_n=10
 )
 
 # makes a small popularity graph for any other software processed during the scan
