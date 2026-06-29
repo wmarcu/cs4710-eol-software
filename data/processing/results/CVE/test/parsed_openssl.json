@@ -1,0 +1,891 @@
+{
+    "CVE-2019-0190": [
+        [],
+        [],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2023-4807": [
+        [],
+        [
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1w"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.11"
+            },
+            {
+                "version_start_including": "3.1.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.1.3"
+            }
+        ],
+        [
+            7.8,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2023-5678": [
+        [],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zj"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1x"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.13"
+            },
+            {
+                "version_start_including": "3.1.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.1.5"
+            }
+        ],
+        [
+            5.3,
+            "3.1",
+            "MEDIUM"
+        ]
+    ],
+    "CVE-2024-0727": [
+        [
+            "3.2.0"
+        ],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zj"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1x"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.13"
+            },
+            {
+                "version_start_including": "3.1.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.1.5"
+            }
+        ],
+        [
+            5.5,
+            "3.1",
+            "MEDIUM"
+        ]
+    ],
+    "CVE-2025-68160": [
+        [],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zn"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1ze"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.19"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.6"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.4"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.5"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.1"
+            }
+        ],
+        [
+            4.7,
+            "3.1",
+            "MEDIUM"
+        ]
+    ],
+    "CVE-2025-69418": [
+        [],
+        [
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1ze"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.19"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.6"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.4"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.5"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.1"
+            }
+        ],
+        [
+            4.0,
+            "3.1",
+            "MEDIUM"
+        ]
+    ],
+    "CVE-2025-69419": [
+        [],
+        [
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1ze"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.19"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.6"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.4"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.5"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.1"
+            }
+        ],
+        [
+            7.4,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2025-69420": [
+        [],
+        [
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1ze"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.19"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.6"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.4"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.5"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.1"
+            }
+        ],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2025-69421": [
+        [],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zn"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": "1.1.1ze",
+                "version_end_excluding": null
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.19"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.6"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.4"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.5"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.1"
+            }
+        ],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-22795": [
+        [],
+        [
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1ze"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.19"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.6"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.4"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.5"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.1"
+            }
+        ],
+        [
+            5.5,
+            "3.1",
+            "MEDIUM"
+        ]
+    ],
+    "CVE-2026-22796": [
+        [],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zn"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1ze"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.19"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.6"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.4"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.5"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.1"
+            }
+        ],
+        [
+            5.3,
+            "3.1",
+            "MEDIUM"
+        ]
+    ],
+    "CVE-2026-28387": [
+        [],
+        [
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zg"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.20"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.7"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.5"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.6"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.2"
+            }
+        ],
+        [
+            8.1,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-28388": [
+        [],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zp"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zg"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.20"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.7"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.5"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.6"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.2"
+            }
+        ],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-28389": [
+        [],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zp"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zg"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.20"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.7"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.5"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.6"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.2"
+            }
+        ],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-28390": [
+        [],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zp"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zg"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.20"
+            },
+            {
+                "version_start_including": "3.3.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.3.7"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.5"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.6"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.2"
+            }
+        ],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-34180": [
+        [
+            "4.0.0"
+        ],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zq"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zh"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.21"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.6"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.7"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.3"
+            }
+        ],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-42766": [
+        [
+            "4.0.0"
+        ],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zq"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zh"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.21"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.6"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.7"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.3"
+            }
+        ],
+        [
+            5.9,
+            "3.1",
+            "MEDIUM"
+        ]
+    ],
+    "CVE-2026-45447": [
+        [
+            "4.0.0"
+        ],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zq"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zh"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.21"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.6"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.7"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.3"
+            }
+        ],
+        [
+            8.8,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-7383": [
+        [
+            "4.0.0"
+        ],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zq"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zh"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.21"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.6"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.7"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.3"
+            }
+        ],
+        [
+            8.1,
+            "3.1",
+            "HIGH"
+        ]
+    ],
+    "CVE-2026-9076": [
+        [
+            "4.0.0"
+        ],
+        [
+            {
+                "version_start_including": "1.0.2",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.0.2zq"
+            },
+            {
+                "version_start_including": "1.1.1",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "1.1.1zh"
+            },
+            {
+                "version_start_including": "3.0.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.0.21"
+            },
+            {
+                "version_start_including": "3.4.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.4.6"
+            },
+            {
+                "version_start_including": "3.5.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.5.7"
+            },
+            {
+                "version_start_including": "3.6.0",
+                "version_start_excluding": null,
+                "version_end_including": null,
+                "version_end_excluding": "3.6.3"
+            }
+        ],
+        [
+            7.5,
+            "3.1",
+            "HIGH"
+        ]
+    ]
+}

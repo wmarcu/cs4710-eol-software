@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y \
     jq \
     python3 \
     python3-pip \
+    python3-pandas \
+    python3-matplotlib \
+    python3-requests \
     dnsutils \
     && rm -rf /var/lib/apt/lists/*
 

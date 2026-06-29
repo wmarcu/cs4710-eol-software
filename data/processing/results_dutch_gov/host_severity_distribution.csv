@@ -1,0 +1,3 @@
+software,total_hosts_with_cve,low_hosts,low_percentage,medium_hosts,medium_percentage,high_hosts,high_percentage,critical_hosts,critical_percentage
+nginx,8,0,0.0,0,0.0,7,87.5,1,12.5
+openssl,2,0,0.0,0,0.0,2,100.0,0,0.0
