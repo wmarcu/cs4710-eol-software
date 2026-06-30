@@ -10,6 +10,7 @@ DEFAULT_RESULTS_FOLDER = "data/processing/results"
 def count_versions_and_eol(scanned_ips_filepath:str, output_versions: str, output_eol: str):
     """Takes as input a .csv with (at least) columns ip, version, eol_status"""
     df = pd.read_csv(scanned_ips_filepath)
+    
 
     if "version" not in df.columns or "eol_status" not in df.columns:
         return
@@ -111,8 +112,9 @@ if __name__ == "__main__":
 
         graph_eol(eol_counts_filepath, graphs_folderpath, software)
 
-        row = table_host_severity_distribution(ip_cve_filepath)
-        severity_rows.append(row)
+        severity_row = table_host_severity_distribution(ip_cve_filepath)
+        if severity_row:
+            severity_rows.append(severity_row)
 
     result = pd.DataFrame(severity_rows)
     result.to_csv(severity_filepath, index=False)
