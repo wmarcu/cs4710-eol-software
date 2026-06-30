@@ -90,6 +90,7 @@ if __name__ == "__main__":
     RESULTS_FOLDER = args.input_dir if args.input_dir else DEFAULT_RESULTS_FOLDER
 
     severity_rows = []
+    severity_filepath = f"{RESULTS_FOLDER}/host_severity_distribution.csv"
 
     graphs_folderpath = f"{RESULTS_FOLDER}/graphs/"
     os.makedirs(graphs_folderpath, exist_ok=True)
@@ -102,7 +103,7 @@ if __name__ == "__main__":
         # outputs
         version_counts_filepath = f"{RESULTS_FOLDER}/{software}/counts_versions.csv"
         eol_counts_filepath = f"{RESULTS_FOLDER}/{software}/counts_eol.csv"
-        severity_filepath = f"{RESULTS_FOLDER}/host_severity_distribution.csv"
+        
         try:
             count_versions_and_eol(scanned_ips_filepath, version_counts_filepath, eol_counts_filepath)
         except pd.errors.EmptyDataError:

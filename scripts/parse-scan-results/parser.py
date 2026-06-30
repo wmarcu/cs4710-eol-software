@@ -62,7 +62,7 @@ def lookup_eol(version, eol_data: dict, software):
     if version in eol_data:
         return eol_data[version]
     
-    return eol_data.get(".".join(version.split(".")[:2]), "N/A")
+    return eol_data.get(".".join(version.split(".")[:2]), "unknown")
 
 def map_eol(input_df : pd.DataFrame, eol_data: dict, software):
     input_df["eol_status"] = input_df["version"].apply(lambda version: lookup_eol(version, eol_data, software))
@@ -71,7 +71,7 @@ def map_eol(input_df : pd.DataFrame, eol_data: dict, software):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Parse scan results")
     parser.add_argument("-i", "--input_dir", help="Folder with scan output. Program will parse ALL .csv files recursively.", default="data/input")
-    parser.add_argument("-o", "--output_dir", help="Output folder.", default = "data/processing/results2")
+    parser.add_argument("-o", "--output_dir", help="Output folder.", default = "data/processing/results")
 
     args = parser.parse_args()
 
