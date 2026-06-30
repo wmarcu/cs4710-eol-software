@@ -53,6 +53,8 @@ python scripts/cve-scripts/cve_api.py -i <input folder>
 ```
 ```<input folder>``` should be the folder produced by the previous script. Defaults to ```data/processing/results```. The output is stored in a folder named ```CVE``` inside the input folder.
 
+Make sure to place a valid api key in ```apikey.env```
+
 In case the script fails during runtime, it can continue where it left off. If you want to run it from the start, make sure the produced ```<input folder>/CVE/progress.json``` is removed. 
 
 The output needs to be parsed:
