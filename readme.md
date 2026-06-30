@@ -53,7 +53,7 @@ Alternatively, to find hosts related to Dutch government domains:
 By default, this will send probes using 100 concurrent senders, configured with a 10 second timeout, to the hosts in the supplied input file. These values can be freely configured by passing the relevant arguments to the script. The script automatically processes the responses to the probes, and extracts software version information (if present), to an output csv located in `data/grab-banners/`.
 
 
-# Processing results (Stage 3 and 4)
+## Processing results (Stage 3 and 4)
 
 1. Output of the scans must be moved to a folder. Run `scripts/parse-scan-results/parser.py` to sort the results.
 ```bash
