@@ -57,7 +57,7 @@ By default, this will send probes using 100 concurrent senders, configured with 
 
 1. Output of the scans must be moved to a folder. Run `scripts/parse-scan-results/parser.py` to sort the results.
 ```bash
-python scripts/parse-scan-results/parser.py -i <input folder> -o <output folder>
+python3 scripts/parse-scan-results/parser.py -i <input folder> -o <output folder>
 ```
 Running without arguments defaults to `data/input` as input and `data/processing/results` for output.
 This will iterate through all scans in the input directory, remove duplicates, and identify whether the observed software versions are EoL using endoflife.date.
@@ -65,7 +65,7 @@ This will iterate through all scans in the input directory, remove duplicates, a
 
 2. Query the NIST NVD database for relevant CVEs:
 ```bash
-python scripts/cve-scripts/cve_api.py -i <input folder>
+python3 scripts/cve-scripts/cve_api.py -i <input folder>
 ```
 `<input folder>` should be the folder produced by the previous script. Defaults to `data/processing/results`. The output is stored in a folder named `CVE` inside the input folder.
 
@@ -75,13 +75,13 @@ In case the script fails during runtime, it can continue where it left off. If y
 
 The output needs to be parsed:
 ```bash
-python scripts/cve-scripts/parse_api_results.py -i <input folder>
+python3 scripts/cve-scripts/parse_api_results.py -i <input folder>
 ```
 `<input folder>` should be the folder produced by the previous script. Defaults to `data/processing/results/CVE`.
 
 3. Map the IPs to the CVEs
 ```bash
-python scripts/cve-scripts/map_ip_to_cve.py -i <input_folder>
+python3 scripts/cve-scripts/map_ip_to_cve.py -i <input_folder>
 ```
 `<input folder>` should be the folder produced by the parser.py script. Defaults to `data/processing/results`.
 
@@ -93,7 +93,7 @@ This script produces two files for each type of software:
 
 4. Make graphs and tables.
 ```bash
-python scripts/visualize-results/make_graphs.py -i <input_folder>
+python3 scripts/visualize-results/make_graphs.py -i <input_folder>
 ```
 `<input folder>` should be the folder produced by the parser.py script. Defaults to `data/processing/results`.
 
