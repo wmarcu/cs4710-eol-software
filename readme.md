@@ -34,6 +34,11 @@ docker run --rm -it \
 ```
 By default, this will scan port 80 on the IP ranges listed in `nl-cidr.conf`, using a bandwidth of 1 Mbps. These values can be freely configured by passing the relevant arguments to the script. After the script finishes, check the `data/scan-ports/` directory for results.
 
+Alternatively, to find hosts related to Dutch government domains:
+```bash
+./scripts/resolve-dns/resolve-dns.sh -i <PATH TO LIST OF DOMAINS>
+```
+
 4. Run stage 2 (software identification):
 ```bash
 ./scripts/grab-banners/grab-banners.sh -i <PATH TO OUTPUT FILE FROM STAGE 1>
